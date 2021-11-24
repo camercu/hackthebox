@@ -1,16 +1,18 @@
 # HackTheBox
 
-Writeups for HTB machines
+Writeups for HTB challenges/machines
 
 
 
-## Windows Boxes
+## Lab Machines
+
+### Windows Boxes
 
 - [x] [secnotes](secnotes/notes.md)
 
 
 
-## Linux Boxes
+### Linux Boxes
 
 - [x] [admirer](admirer/notes.md)
 - [x] [jarvis](jarvis/notes.md)
