@@ -1,5 +1,7 @@
 # executables
 *.exe
+*.dll
+*.msi
 *.so
 *.elf
 *.out
