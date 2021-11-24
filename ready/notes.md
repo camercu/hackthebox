@@ -1,4 +1,4 @@
-# ready - 10.10.10.220
+# Ready
 
 Exploit SSRF + CRLF vulnerabilities in Gitlab 11.4.7 to get remote code execution. Escalate to root inside docker container by leveraging reused creds in `/opt/backup/gitlab.rb` file. Escape docker container by taking advantage of `privileged` mode to mount host's root file system and adding new root user or root ssh keys. SSH on to host for root access.
 
