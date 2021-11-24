@@ -1,0 +1,28 @@
+# Nmap 7.91 scan initiated Wed Mar 31 10:48:13 2021 as: nmap -v -n "--script=safe and ms-sql-*" --script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=,mssql.instance-name=MSSQLSERVER -sV -p 1433 -oA nmap/safe-ms-sql 10.10.10.27
+Nmap scan report for 10.10.10.27
+Host is up (0.021s latency).
+
+PORT     STATE SERVICE  VERSION
+1433/tcp open  ms-sql-s Microsoft SQL Server 2017 14.00.1000.00; RTM
+| ms-sql-ntlm-info: 
+|   Target_Name: ARCHETYPE
+|   NetBIOS_Domain_Name: ARCHETYPE
+|   NetBIOS_Computer_Name: ARCHETYPE
+|   DNS_Domain_Name: Archetype
+|   DNS_Computer_Name: Archetype
+|_  Product_Version: 10.0.17763
+
+Host script results:
+| ms-sql-info: 
+|   10.10.10.27:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2017 RTM
+|       number: 14.00.1000.00
+|       Product: Microsoft SQL Server 2017
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar 31 10:48:20 2021 -- 1 IP address (1 host up) scanned in 6.93 seconds

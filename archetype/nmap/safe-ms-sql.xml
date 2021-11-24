@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Mar 31 10:48:13 2021 as: nmap -v -n &quot;-&#45;script=safe and ms-sql-*&quot; -&#45;script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=,mssql.instance-name=MSSQLSERVER -sV -p 1433 -oA nmap/safe-ms-sql 10.10.10.27 -->
+<nmaprun scanner="nmap" args="nmap -v -n &quot;-&#45;script=safe and ms-sql-*&quot; -&#45;script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=,mssql.instance-name=MSSQLSERVER -sV -p 1433 -oA nmap/safe-ms-sql 10.10.10.27" start="1617202093" startstr="Wed Mar 31 10:48:13 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="1433"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1617202094"/>
+<taskend task="NSE" time="1617202094"/>
+<taskbegin task="NSE" time="1617202094"/>
+<taskend task="NSE" time="1617202094"/>
+<taskbegin task="Ping Scan" time="1617202094"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1617202094" extrainfo="1 total hosts"/>
+<taskbegin task="Connect Scan" time="1617202094"/>
+<taskend task="Connect Scan" time="1617202094" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1617202094"/>
+<taskend task="Service scan" time="1617202100" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1617202100"/>
+<taskend task="NSE" time="1617202100"/>
+<taskbegin task="NSE" time="1617202100"/>
+<taskend task="NSE" time="1617202100"/>
+<host starttime="1617202094" endtime="1617202100"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.10.10.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-sql-s" product="Microsoft SQL Server 2017" version="14.00.1000.00; RTM" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server:2017</cpe></service><script id="ms-sql-ntlm-info" output="&#xa;  Target_Name: ARCHETYPE&#xa;  NetBIOS_Domain_Name: ARCHETYPE&#xa;  NetBIOS_Computer_Name: ARCHETYPE&#xa;  DNS_Domain_Name: Archetype&#xa;  DNS_Computer_Name: Archetype&#xa;  Product_Version: 10.0.17763"><elem key="Target_Name">ARCHETYPE</elem>
+<elem key="NetBIOS_Domain_Name">ARCHETYPE</elem>
+<elem key="NetBIOS_Computer_Name">ARCHETYPE</elem>
+<elem key="DNS_Domain_Name">Archetype</elem>
+<elem key="DNS_Computer_Name">Archetype</elem>
+<elem key="Product_Version">10.0.17763</elem>
+</script></port>
+</ports>
+<hostscript><script id="ms-sql-info" output="&#xa;  10.10.10.27:1433: &#xa;    Version: &#xa;      name: Microsoft SQL Server 2017 RTM&#xa;      number: 14.00.1000.00&#xa;      Product: Microsoft SQL Server 2017&#xa;      Service pack level: RTM&#xa;      Post-SP patches applied: false&#xa;    TCP port: 1433"><table key="10.10.10.27:1433">
+<table key="Version">
+<elem key="name">Microsoft SQL Server 2017 RTM</elem>
+<elem key="number">14.00.1000.00</elem>
+<elem key="Product">Microsoft SQL Server 2017</elem>
+<elem key="Service pack level">RTM</elem>
+<elem key="Post-SP patches applied">false</elem>
+</table>
+<elem key="TCP port">1433</elem>
+</table>
+</script></hostscript><times srtt="20592" rttvar="17681" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1617202100"/>
+<taskend task="NSE" time="1617202100"/>
+<taskbegin task="NSE" time="1617202100"/>
+<taskend task="NSE" time="1617202100"/>
+<runstats><finished time="1617202100" timestr="Wed Mar 31 10:48:20 2021" summary="Nmap done at Wed Mar 31 10:48:20 2021; 1 IP address (1 host up) scanned in 6.93 seconds" elapsed="6.93" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

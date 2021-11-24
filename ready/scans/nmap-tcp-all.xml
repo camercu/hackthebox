@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Aug 15 22:09:38 2021 as: nmap -vvv -p 22,5080 -n -Pn -sV -sC -oA nmap-tcp-all 10.10.10.220 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 22,5080 -n -Pn -sV -sC -oA nmap-tcp-all 10.10.10.220" start="1629079778" startstr="Sun Aug 15 22:09:38 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,5080"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1629079780"/>
+<taskend task="NSE" time="1629079780"/>
+<taskbegin task="NSE" time="1629079780"/>
+<taskend task="NSE" time="1629079780"/>
+<taskbegin task="NSE" time="1629079780"/>
+<taskend task="NSE" time="1629079780"/>
+<taskbegin task="SYN Stealth Scan" time="1629079781"/>
+<taskend task="SYN Stealth Scan" time="1629079781" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1629079781"/>
+<taskend task="Service scan" time="1629079792" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1629079792"/>
+<taskend task="NSE" time="1629079795"/>
+<taskbegin task="NSE" time="1629079795"/>
+<taskend task="NSE" time="1629079795"/>
+<taskbegin task="NSE" time="1629079795"/>
+<taskend task="NSE" time="1629079795"/>
+<host starttime="1629079781" endtime="1629079795"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.220" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC82vTuN1hMqiqUfN+Lwih4g8rSJjaMjDQdhfdT8vEQ67urtQIyPszlNtkCDn6MNcBfibD/7Zz4r8lr1iNe/Afk6LJqTt3OWewzS2a1TpCrEbvoileYAl/Feya5PfbZ8mv77+MWEA+kT0pAw1xW9bpkhYCGkJQm9OYdcsEEg1i+kQ/ng3+GaFrGJjxqYaW1LXyXN1f7j9xG2f27rKEZoRO/9HOH9Y+5ru184QQXjW/ir+lEJ7xTwQA5U1GOW1m/AgpHIfI5j9aDfT/r4QMe+au+2yPotnOGBBJBz3ef+fQzj/Cq7OGRR96ZBfJ3i00B/Waw/RI19qd7+ybNXF/gBzptEYXujySQZSu92Dwi23itxJBolE6hpQ2uYVA8VBlF0KXESt3ZJVWSAsU3oguNCXtY7krjqPe6BZRy+lrbeska1bIGPZrqLEgptpKhz14UaOcH9/vpMYFdSKr24aMXvZBDK1GJg50yihZx8I9I367z0my8E89+TnjGFY2QTzxmbmU=&#xa;  256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBH2y17GUe6keBxOcBGNkWsliFwTRwUtQB3NXEhTAFLziGDfCgBV7B9Hp6GQMPGQXqMk7nnveA8vUz0D7ug5n04A=&#xa;  256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKfXa+OM5/utlol5mJajysEsV4zb/L0BJ1lKxMPadPvR"><table>
+<elem key="fingerprint">48add5b83a9fbcbef7e8201ef6bfdeae</elem>
+<elem key="bits">3072</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQC82vTuN1hMqiqUfN+Lwih4g8rSJjaMjDQdhfdT8vEQ67urtQIyPszlNtkCDn6MNcBfibD/7Zz4r8lr1iNe/Afk6LJqTt3OWewzS2a1TpCrEbvoileYAl/Feya5PfbZ8mv77+MWEA+kT0pAw1xW9bpkhYCGkJQm9OYdcsEEg1i+kQ/ng3+GaFrGJjxqYaW1LXyXN1f7j9xG2f27rKEZoRO/9HOH9Y+5ru184QQXjW/ir+lEJ7xTwQA5U1GOW1m/AgpHIfI5j9aDfT/r4QMe+au+2yPotnOGBBJBz3ef+fQzj/Cq7OGRR96ZBfJ3i00B/Waw/RI19qd7+ybNXF/gBzptEYXujySQZSu92Dwi23itxJBolE6hpQ2uYVA8VBlF0KXESt3ZJVWSAsU3oguNCXtY7krjqPe6BZRy+lrbeska1bIGPZrqLEgptpKhz14UaOcH9/vpMYFdSKr24aMXvZBDK1GJg50yihZx8I9I367z0my8E89+TnjGFY2QTzxmbmU=</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="fingerprint">b7896c0b20ed49b2c1867c2992741c1f</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBH2y17GUe6keBxOcBGNkWsliFwTRwUtQB3NXEhTAFLziGDfCgBV7B9Hp6GQMPGQXqMk7nnveA8vUz0D7ug5n04A=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="fingerprint">18cd9d08a621a8b8b6f79f8d405154fb</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIKfXa+OM5/utlol5mJajysEsV4zb/L0BJ1lKxMPadPvR</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="5080"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-robots.txt" output="53 disallowed entries (40 shown)&#xa;/ /autocomplete/users /search /api /admin /profile &#xa;/dashboard /projects/new /groups/new /groups/*/edit /users /help &#xa;/s/ /snippets/new /snippets/*/edit /snippets/*/raw &#xa;/*/*.git /*/*/fork/new /*/*/repository/archive* /*/*/activity &#xa;/*/*/new /*/*/edit /*/*/raw /*/*/blame /*/*/commits/*/* &#xa;/*/*/commit/*.patch /*/*/commit/*.diff /*/*/compare /*/*/branches/new &#xa;/*/*/tags/new /*/*/network /*/*/graphs /*/*/milestones/new &#xa;/*/*/milestones/*/edit /*/*/issues/new /*/*/issues/*/edit &#xa;/*/*/merge_requests/new /*/*/merge_requests/*.patch &#xa;/*/*/merge_requests/*.diff /*/*/merge_requests/*/edit"/><script id="http-title" output="GitLab is not responding (502)"><elem key="title">GitLab is not responding (502)</elem>
+</script></port>
+</ports>
+<times srtt="14541" rttvar="11370" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1629079795"/>
+<taskend task="NSE" time="1629079795"/>
+<taskbegin task="NSE" time="1629079795"/>
+<taskend task="NSE" time="1629079795"/>
+<taskbegin task="NSE" time="1629079795"/>
+<taskend task="NSE" time="1629079795"/>
+<runstats><finished time="1629079795" timestr="Sun Aug 15 22:09:55 2021" summary="Nmap done at Sun Aug 15 22:09:55 2021; 1 IP address (1 host up) scanned in 17.53 seconds" elapsed="17.53" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

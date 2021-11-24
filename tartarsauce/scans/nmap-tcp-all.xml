@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Aug 24 20:37:32 2021 as: nmap -vvv -p 80 -n -Pn -sV -sC -oA nmap-tcp-all 10.10.10.88 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 80 -n -Pn -sV -sC -oA nmap-tcp-all 10.10.10.88" start="1629851852" startstr="Tue Aug 24 20:37:32 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1629851853"/>
+<taskend task="NSE" time="1629851853"/>
+<taskbegin task="NSE" time="1629851853"/>
+<taskend task="NSE" time="1629851853"/>
+<taskbegin task="NSE" time="1629851853"/>
+<taskend task="NSE" time="1629851853"/>
+<taskbegin task="SYN Stealth Scan" time="1629851853"/>
+<taskend task="SYN Stealth Scan" time="1629851853" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1629851853"/>
+<taskend task="Service scan" time="1629851859" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1629851859"/>
+<taskend task="NSE" time="1629851859"/>
+<taskbegin task="NSE" time="1629851859"/>
+<taskend task="NSE" time="1629851859"/>
+<taskbegin task="NSE" time="1629851859"/>
+<taskend task="NSE" time="1629851859"/>
+<host starttime="1629851853" endtime="1629851859"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.88" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS GET HEAD POST"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-robots.txt" output="5 disallowed entries &#xa;/webservices/tar/tar/source/ &#xa;/webservices/monstra-3.0.4/ /webservices/easy-file-uploader/ &#xa;/webservices/developmental/ /webservices/phpmyadmin/"/><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script><script id="http-title" output="Landing Page"><elem key="title">Landing Page</elem>
+</script></port>
+</ports>
+<times srtt="12433" rttvar="12433" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1629851859"/>
+<taskend task="NSE" time="1629851859"/>
+<taskbegin task="NSE" time="1629851859"/>
+<taskend task="NSE" time="1629851859"/>
+<taskbegin task="NSE" time="1629851859"/>
+<taskend task="NSE" time="1629851859"/>
+<runstats><finished time="1629851859" timestr="Tue Aug 24 20:37:39 2021" summary="Nmap done at Tue Aug 24 20:37:39 2021; 1 IP address (1 host up) scanned in 7.73 seconds" elapsed="7.73" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

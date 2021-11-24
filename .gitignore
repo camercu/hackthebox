@@ -1,0 +1,21 @@
+# executables
+*.exe
+*.so
+*.elf
+*.out
+
+# raw binaries
+*.bin
+
+# compressed files
+*.tar
+*.gz
+*.zip
+*.bz2
+
+# openvpn files
+*.ovpn
+
+# misc
+*.pdf
+hydra.restore

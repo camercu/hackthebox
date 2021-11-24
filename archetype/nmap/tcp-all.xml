@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Mar 31 12:02:59 2021 as: nmap -v -n -sC -sV -p135,139,445,1433,5985,47001,49664,49665,49666,49667,49668,49669 -oA nmap/tcp-all 10.10.10.27 -->
+<nmaprun scanner="nmap" args="nmap -v -n -sC -sV -p135,139,445,1433,5985,47001,49664,49665,49666,49667,49668,49669 -oA nmap/tcp-all 10.10.10.27" start="1617206579" startstr="Wed Mar 31 12:02:59 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="12" services="135,139,445,1433,5985,47001,49664-49669"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1617206579"/>
+<taskend task="NSE" time="1617206579"/>
+<taskbegin task="NSE" time="1617206579"/>
+<taskend task="NSE" time="1617206579"/>
+<taskbegin task="NSE" time="1617206579"/>
+<taskend task="NSE" time="1617206579"/>
+<taskbegin task="Ping Scan" time="1617206579"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1617206579" extrainfo="1 total hosts"/>
+<taskbegin task="Connect Scan" time="1617206579"/>
+<taskend task="Connect Scan" time="1617206579" extrainfo="12 total ports"/>
+<taskbegin task="Service scan" time="1617206579"/>
+<taskprogress task="Service scan" time="1617206638" percent="58.33" remaining="43" etc="1617206680"/>
+<taskend task="Service scan" time="1617206638" extrainfo="12 services on 1 host"/>
+<taskbegin task="NSE" time="1617206638"/>
+<taskend task="NSE" time="1617206676"/>
+<taskbegin task="NSE" time="1617206676"/>
+<taskend task="NSE" time="1617206676"/>
+<taskbegin task="NSE" time="1617206676"/>
+<taskend task="NSE" time="1617206676"/>
+<host starttime="1617206579" endtime="1617206676"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.10.10.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-sql-s" product="Microsoft SQL Server 2017" version="14.00.1000" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server:2017</cpe></service><script id="ssl-cert" output="Subject: commonName=SSL_Self_Signed_Fallback&#xa;Issuer: commonName=SSL_Self_Signed_Fallback&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-03-31T16:25:50&#xa;Not valid after:  2051-03-31T16:25:50&#xa;MD5:   e344 2e96 1df1 960d 5cbc df2f d2ce 811a&#xa;SHA-1: aba3 62f6 ca48 9f3b 44c5 f32f 8e43 b3da 490e 1755"><table key="subject">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BDE9FDD632288CF117BA9F9733B5AA6ED9C338D3DD6C4219BBDD15F3110A83C5DB75669EC131420DFAAFD14A63B42AA5AA60229379424DDDEB7394CAF6304F3862446859C7E89380E8B77EABAE72F45FC94D92F40B3102A17B044E5C75534A29154A2F7E89BC7D05E2A8DE60FF83E58B1A1439264B8C6C6EFBEEEE66F190AFDB8179ED75B2B84193A410938B4E8179D40F5C1B971ED1CFD598223FD39D9D42B50184738A617929C3A28999FEC7667FE2143FD833706532B4E292AC656AB5C325775EE24F805EC081B3B73D10F8B739DD2D318950B985C107B5ABF051F15BF72AC050FD4AF3817A16D76996C2837A78339B0041C5C9AB90F747C7B457A79558F9</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-03-31T16:25:50</elem>
+<elem key="notAfter">2051-03-31T16:25:50</elem>
+</table>
+<elem key="md5">e3442e961df1960d5cbcdf2fd2ce811a</elem>
+<elem key="sha1">aba362f6ca489f3b44c5f32f8e43b3da490e1755</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDADCCAeigAwIBAgIQXv6GDcoqu6JCFSmyWn2SvjANBgkqhkiG9w0BAQsFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjEwMzMxMTYyNTUwWhgPMjA1MTAzMzExNjI1NTBaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL3p/dYy&#xa;KIzxF7qflzO1qm7ZwzjT3WxCGbvdFfMRCoPF23VmnsExQg36r9FKY7QqpapgIpN5&#xa;Qk3d63OUyvYwTzhiRGhZx+iTgOi3fquucvRfyU2S9AsxAqF7BE5cdVNKKRVKL36J&#xa;vH0F4qjeYP+D5YsaFDkmS4xsbvvu7mbxkK/bgXntdbK4QZOkEJOLToF51A9cG5ce&#xa;0c/VmCI/052dQrUBhHOKYXkpw6KJmf7HZn/iFD/YM3BlMrTikqxlarXDJXde4k+A&#xa;XsCBs7c9EPi3Od0tMYlQuYXBB7Wr8FHxW/cqwFD9SvOBehbXaZbCg3p4M5sAQcXJ&#xa;q5D3R8e0V6eVWPkCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAVfuXzWnZMaxup1nn&#xa;+TzoXGRUoVG7Li8MOQYsG6yiTAIHgj/RP8mlct6HxrQ+nZAb21o69R50F1YtY+pj&#xa;sATjERR7sm3R2FdxpXv8fPvFeR6nvgFIvDA1L14uYA5Ct7bGylRp3ZlSUfeZuZdu&#xa;nEKk2gEQTIUs8EMfzP6q31Lg9HacqK6c0ahJsoItURe9CXGxfJ0sPwMJANgBDL1c&#xa;Zp4wfTwIAD/oeSlsKXLzCgOvRZW3+xEzHoPLMplfP7IM+GfCOE/tFYxntK3Sqp4K&#xa;114zPvG6Ifb6IWyPM6lu5jv0/8ZBx/9Kht76gwCYxDqu/eD8CGCxanRMJoT2qZL5&#xa;RP6iiQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-03-31T16:25:56+00:00; +21m20s from scanner time."><elem key="delta">1280.0</elem>
+<elem key="date">2021-03-31T16:25:56+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: 21m19s, deviation: 0s, median: 21m19s"><elem key="mean">1279</elem>
+<elem key="median">1279</elem>
+<elem key="count">2</elem>
+<elem key="stddev">0</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-03-31T16:25:56&#xa;  start_date: N/A"><elem key="date">2021-03-31T16:25:56</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="16055" rttvar="1534" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1617206676"/>
+<taskend task="NSE" time="1617206676"/>
+<taskbegin task="NSE" time="1617206676"/>
+<taskend task="NSE" time="1617206676"/>
+<taskbegin task="NSE" time="1617206676"/>
+<taskend task="NSE" time="1617206676"/>
+<runstats><finished time="1617206676" timestr="Wed Mar 31 12:04:36 2021" summary="Nmap done at Wed Mar 31 12:04:36 2021; 1 IP address (1 host up) scanned in 97.41 seconds" elapsed="97.41" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,43 @@
+# Nmap 7.91 scan initiated Wed Mar 31 12:02:59 2021 as: nmap -v -n -sC -sV -p135,139,445,1433,5985,47001,49664,49665,49666,49667,49668,49669 -oA nmap/tcp-all 10.10.10.27
+Nmap scan report for 10.10.10.27
+Host is up (0.016s latency).
+
+PORT      STATE SERVICE      VERSION
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+1433/tcp  open  ms-sql-s     Microsoft SQL Server 2017 14.00.1000
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-03-31T16:25:50
+| Not valid after:  2051-03-31T16:25:50
+| MD5:   e344 2e96 1df1 960d 5cbc df2f d2ce 811a
+|_SHA-1: aba3 62f6 ca48 9f3b 44c5 f32f 8e43 b3da 490e 1755
+|_ssl-date: 2021-03-31T16:25:56+00:00; +21m20s from scanner time.
+5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+47001/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49664/tcp open  unknown
+49665/tcp open  unknown
+49666/tcp open  unknown
+49667/tcp open  unknown
+49668/tcp open  unknown
+49669/tcp open  unknown
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 21m19s, deviation: 0s, median: 21m19s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-03-31T16:25:56
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar 31 12:04:36 2021 -- 1 IP address (1 host up) scanned in 97.41 seconds

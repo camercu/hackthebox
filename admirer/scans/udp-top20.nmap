@@ -1,0 +1,17 @@
+# Nmap 7.91 scan initiated Mon Aug 23 21:13:02 2021 as: nmap -n -v -sU -T4 -sV --top-ports=20 --reason --open -oA udp-top20 10.10.10.187
+Warning: 10.10.10.187 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.10.10.187
+Host is up, received echo-reply ttl 63 (0.015s latency).
+Not shown: 14 closed ports
+Reason: 14 port-unreaches
+PORT    STATE         SERVICE     REASON      VERSION
+139/udp open|filtered netbios-ssn no-response
+161/udp open|filtered snmp        no-response
+162/udp open|filtered snmptrap    no-response
+500/udp open|filtered isakmp      no-response
+514/udp open|filtered syslog      no-response
+520/udp open|filtered route       no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Aug 23 21:14:11 2021 -- 1 IP address (1 host up) scanned in 69.46 seconds

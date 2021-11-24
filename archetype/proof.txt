@@ -1,0 +1,40 @@
+C:\Users\sql_svc\Desktop>type user.txt
+3e7b102e78218e935bf3f4951fec21a3
+
+C:\Users\sql_svc\Desktop>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet0 2:
+
+   Connection-specific DNS Suffix  . : 
+   IPv6 Address. . . . . . . . . . . : dead:beef::c893:bd6e:36a3:30ed
+   Link-local IPv6 Address . . . . . : fe80::c893:bd6e:36a3:30ed%7
+   IPv4 Address. . . . . . . . . . . : 10.10.10.27
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::250:56ff:feb9:bac4%7
+                                       10.10.10.2
+
+
+############################################################
+
+
+c:\Users\Administrator\Desktop>type root.txt
+b91ccec3305e98240082d4474b848528
+
+c:\Users\Administrator\Desktop>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet0 2:
+
+   Connection-specific DNS Suffix  . : 
+   IPv6 Address. . . . . . . . . . . : dead:beef::c893:bd6e:36a3:30ed
+   Link-local IPv6 Address . . . . . : fe80::c893:bd6e:36a3:30ed%7
+   IPv4 Address. . . . . . . . . . . : 10.10.10.27
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::250:56ff:feb9:bac4%7
+                                       10.10.10.2
+

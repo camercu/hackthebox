@@ -1,0 +1,3 @@
+secnotes:q8N#9Eos%JinE57tke72  # db creds
+root:qwer1234QWER!@#$  # commented out db creds
+administrator:u6!4ZwgwOM#^OBf#Nwnh

@@ -1,0 +1,5 @@
+# Nmap 7.91 scan initiated Tue Aug 24 20:37:32 2021 as: nmap -vvv -p 80 -n -Pn -sV -sC -oA nmap-tcp-all 10.10.10.88
+# Ports scanned: TCP(1;80) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.88 ()	Status: Up
+Host: 10.10.10.88 ()	Ports: 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/
+# Nmap done at Tue Aug 24 20:37:39 2021 -- 1 IP address (1 host up) scanned in 7.73 seconds

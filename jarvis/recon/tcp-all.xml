@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Nov 23 11:45:07 2021 as: nmap -vvv -p 22,80,64999 -n -A -oA recon/tcp-all 10.10.10.143 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 22,80,64999 -n -A -oA recon/tcp-all 10.10.10.143" start="1637685907" startstr="Tue Nov 23 11:45:07 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="22,80,64999"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1637685908"/>
+<taskend task="NSE" time="1637685908"/>
+<taskbegin task="NSE" time="1637685908"/>
+<taskend task="NSE" time="1637685908"/>
+<taskbegin task="NSE" time="1637685908"/>
+<taskend task="NSE" time="1637685908"/>
+<taskbegin task="Ping Scan" time="1637685908"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.143" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1637685908" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1637685908"/>
+<taskend task="SYN Stealth Scan" time="1637685908" extrainfo="3 total ports"/>
+<taskbegin task="Service scan" time="1637685908"/>
+<taskend task="Service scan" time="1637685919" extrainfo="3 services on 1 host"/>
+<taskbegin task="Traceroute" time="1637685923"/>
+<taskend task="Traceroute" time="1637685923"/>
+<taskbegin task="NSE" time="1637685923"/>
+<taskend task="NSE" time="1637685925"/>
+<taskbegin task="NSE" time="1637685925"/>
+<taskend task="NSE" time="1637685925"/>
+<taskbegin task="NSE" time="1637685925"/>
+<taskend task="NSE" time="1637685925"/>
+<host starttime="1637685908" endtime="1637685925"><status state="up" reason="reset" reason_ttl="63"/>
+<address addr="10.10.10.143" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.4p1 Debian 10+deb9u6" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 03:f3:4e:22:36:3e:3b:81:30:79:ed:49:67:65:16:67 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzv4ZGiO8sDRbIsdZhchg+dZEot3z8++mrp9m0VjP6qxr70SwkE0VGu+GkH7vGapJQLMvjTLjyHojU/AcEm9MWTRWdpIrsUirgawwROic6HmdK2e0bVUZa8fNJIoyY1vPa4uNJRKZ+FNoT8qdl9kvG1NGdBl1+zoFbR9az0sgcNZJ1lZzZNnr7zv/Jghd/ZWjeiiVykomVRfSUCZe5qZ/aV6uVmBQ/mdqpXyxPIl1pG642C5j5K84su8CyoiSf0WJ2Vj8GLiKU3EXQzluQ8QJJPJTjj028yuLjDLrtugoFn43O6+IolMZZvGU9Man5Iy5OEWBay9Tn0UDSdjbSPi1X&#xa;  256 25:d8:08:a8:4d:6d:e8:d2:f8:43:4a:2c:20:c8:5a:f6 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCDW2OapO3Dq1CHlnKtWhDucQdl2yQNJA79qP0TDmZBR967hxE9ESMegRuGfQYq0brLSR8Xi6f3O8XL+3bbWbGQ=&#xa;  256 77:d4:ae:1f:b0:be:15:1f:f8:cd:c8:15:3a:c3:69:e1 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPuKufVSUgOG304mZjkK8IrZcAGMm76Rfmq2by7C0Nmo"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCzv4ZGiO8sDRbIsdZhchg+dZEot3z8++mrp9m0VjP6qxr70SwkE0VGu+GkH7vGapJQLMvjTLjyHojU/AcEm9MWTRWdpIrsUirgawwROic6HmdK2e0bVUZa8fNJIoyY1vPa4uNJRKZ+FNoT8qdl9kvG1NGdBl1+zoFbR9az0sgcNZJ1lZzZNnr7zv/Jghd/ZWjeiiVykomVRfSUCZe5qZ/aV6uVmBQ/mdqpXyxPIl1pG642C5j5K84su8CyoiSf0WJ2Vj8GLiKU3EXQzluQ8QJJPJTjj028yuLjDLrtugoFn43O6+IolMZZvGU9Man5Iy5OEWBay9Tn0UDSdjbSPi1X</elem>
+<elem key="fingerprint">03f34e22363e3b813079ed4967651667</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCDW2OapO3Dq1CHlnKtWhDucQdl2yQNJA79qP0TDmZBR967hxE9ESMegRuGfQYq0brLSR8Xi6f3O8XL+3bbWbGQ=</elem>
+<elem key="fingerprint">25d808a84d6de8d2f8434a2c20c85af6</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIPuKufVSUgOG304mZjkK8IrZcAGMm76Rfmq2by7C0Nmo</elem>
+<elem key="fingerprint">77d4ae1fb0be151ff8cdc8153ac369e1</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-cookie-flags" output="&#xa;  /: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+</script><script id="http-title" output="Stark Hotel"><elem key="title">Stark Hotel</elem>
+</script></port>
+<port protocol="tcp" portid="64999"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: POST OPTIONS HEAD GET"><table key="Supported Methods">
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>GET</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="37335"/>
+<osmatch name="Linux 3.2 - 4.9" accuracy="95" line="65317">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="95" line="62920">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="95" line="64667">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61818">
+<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.12" accuracy="94" line="63648">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.12</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="94" line="63765">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="94" line="64156">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.18" accuracy="94" line="64450">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.8" accuracy="94" line="67900">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:4.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="94" line="67751">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=11/23%OT=22%CT=%CU=37335%PV=Y%DS=2%DC=T%G=N%TM=619D1AA5%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=104%GCD=1%ISR=107%TI=Z%CI=Z%II=I%TS=8)&#xa;OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="17248643" lastboot="Fri May  7 21:28:02 2021"/>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="89FCC5F4,930ACB4D,65EDC484,B5619F1C,C8596F0A,1EE26B1C"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="FFFF2604,FFFF261E,FFFF2637,FFFF2650,FFFF2668,FFFF2681"/>
+<trace port="443" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="13.95"/>
+<hop ttl="2" ipaddr="10.10.10.143" rtt="14.00"/>
+</trace>
+<times srtt="19662" rttvar="6525" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1637685925"/>
+<taskend task="NSE" time="1637685925"/>
+<taskbegin task="NSE" time="1637685925"/>
+<taskend task="NSE" time="1637685925"/>
+<taskbegin task="NSE" time="1637685925"/>
+<taskend task="NSE" time="1637685925"/>
+<runstats><finished time="1637685925" timestr="Tue Nov 23 11:45:25 2021" summary="Nmap done at Tue Nov 23 11:45:25 2021; 1 IP address (1 host up) scanned in 17.84 seconds" elapsed="17.84" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
