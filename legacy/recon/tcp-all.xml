@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Wed Nov 24 23:26:51 2021 as: nmap -vvv -p 139,445 -n -sV -sC -oA tcp-all 10.10.10.4 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 139,445 -n -sV -sC -oA tcp-all 10.10.10.4" start="1637814411" startstr="Wed Nov 24 23:26:51 2021" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="139,445"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1637814412"/>
+<taskend task="NSE" time="1637814412"/>
+<taskbegin task="NSE" time="1637814412"/>
+<taskend task="NSE" time="1637814412"/>
+<taskbegin task="NSE" time="1637814412"/>
+<taskend task="NSE" time="1637814412"/>
+<taskbegin task="Ping Scan" time="1637814412"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.4" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1637814412" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1637814412"/>
+<taskend task="SYN Stealth Scan" time="1637814412" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1637814412"/>
+<taskend task="Service scan" time="1637814418" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1637814418"/>
+<taskprogress task="NSE" time="1637814449" percent="99.64" remaining="1" etc="1637814449"/>
+<taskend task="NSE" time="1637814458"/>
+<taskbegin task="NSE" time="1637814458"/>
+<taskend task="NSE" time="1637814458"/>
+<taskbegin task="NSE" time="1637814458"/>
+<taskend task="NSE" time="1637814458"/>
+<host starttime="1637814412" endtime="1637814458"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.4" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows XP microsoft-ds" ostype="Windows XP" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows_xp</cpe></service></port>
+</ports>
+<hostscript><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 40600/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 40501/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 50902/udp): CLEAN (Timeout)&#xa;  Check 4 (port 34108/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/><script id="clock-skew" output="mean: 5d01h01m20s, deviation: 1h24m50s, median: 5d00h01m20s"><elem key="median">432080</elem>
+<elem key="stddev">5090</elem>
+<elem key="mean">435680</elem>
+<elem key="count">2</elem>
+</script><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="nbstat" output="NetBIOS name: LEGACY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:b9:d7:05 (VMware)&#xa;Names:&#xa;  LEGACY&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  HTB&lt;00&gt;              Flags: &lt;group&gt;&lt;active&gt;&#xa;  LEGACY&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  HTB&lt;1e&gt;              Flags: &lt;group&gt;&lt;active&gt;&#xa;  HTB&lt;1d&gt;              Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 50 56 b9 d7 05 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows XP (Windows 2000 LAN Manager)&#xa;  OS CPE: cpe:/o:microsoft:windows_xp::-&#xa;  Computer name: legacy&#xa;  NetBIOS computer name: LEGACY\x00&#xa;  Workgroup: HTB\x00&#xa;  System time: 2021-11-30T08:28:19+02:00&#xa;"><elem key="os">Windows 5.1</elem>
+<elem key="lanmanager">Windows 2000 LAN Manager</elem>
+<elem key="server">LEGACY\x00</elem>
+<elem key="date">2021-11-30T08:28:19+02:00</elem>
+<elem key="fqdn">legacy</elem>
+<elem key="domain_dns">legacy</elem>
+<elem key="workgroup">HTB\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_xp::-</elem>
+</script></hostscript><times srtt="18182" rttvar="10916" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1637814458"/>
+<taskend task="NSE" time="1637814458"/>
+<taskbegin task="NSE" time="1637814458"/>
+<taskend task="NSE" time="1637814458"/>
+<taskbegin task="NSE" time="1637814458"/>
+<taskend task="NSE" time="1637814458"/>
+<runstats><finished time="1637814458" timestr="Wed Nov 24 23:27:38 2021" summary="Nmap done at Wed Nov 24 23:27:38 2021; 1 IP address (1 host up) scanned in 47.29 seconds" elapsed="47.29" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

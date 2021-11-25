@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Wed Nov 24 23:26:51 2021 as: nmap -vvv -p 139,445 -n -sV -sC -oA tcp-all 10.10.10.4
+# Ports scanned: TCP(2;139,445) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.4 ()	Status: Up
+Host: 10.10.10.4 ()	Ports: 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Windows XP microsoft-ds/
+# Nmap done at Wed Nov 24 23:27:38 2021 -- 1 IP address (1 host up) scanned in 47.29 seconds

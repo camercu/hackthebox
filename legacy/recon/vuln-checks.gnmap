@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Wed Nov 24 23:36:24 2021 as: nmap -n -v -sV --script "(vuln and safe)" -p139,445 -oA vuln-checks 10.10.10.4
+# Ports scanned: TCP(2;139,445) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.4 ()	Status: Up
+Host: 10.10.10.4 ()	Ports: 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Microsoft Windows XP microsoft-ds/
+# Nmap done at Wed Nov 24 23:36:31 2021 -- 1 IP address (1 host up) scanned in 7.38 seconds
