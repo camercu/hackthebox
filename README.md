@@ -8,6 +8,8 @@ Writeups for HTB challenges/machines
 
 ### Windows Boxes
 
+- [x] [legacy](legacy/notes.md)
+
 - [x] [secnotes](secnotes/notes.md)
 
 

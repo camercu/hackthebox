@@ -92,7 +92,7 @@ Host script results:
 |_      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
 ```
 
-Nice, vulnerable to MS17-010 (ETERNAL BLUE). We'll just do an easy kill with metasploit:
+Nice, vulnerable to MS17-010 (ETERNAL BLUE). We'll just do an easy kill with metasploit because it's late at night:
 
 ```sh
 # start the database
