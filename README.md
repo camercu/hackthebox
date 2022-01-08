@@ -20,6 +20,7 @@ Writeups for HTB challenges/machines
 - [x] [jarvis](jarvis/notes.md)
 - [x] [ready](ready/notes.md)
 - [x] [tartarsauce](tartarsauce/notes.md)
+- [x] [haircut](haircut/notes.md)
 
 
 

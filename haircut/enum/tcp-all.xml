@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Jan  7 14:14:04 2022 as: nmap -vvv -p 22,80 -n -Pn -sV -sC -oA tcp-all 10.10.10.24 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 22,80 -n -Pn -sV -sC -oA tcp-all 10.10.10.24" start="1641582844" startstr="Fri Jan  7 14:14:04 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1641582846"/>
+<taskend task="NSE" time="1641582846"/>
+<taskbegin task="NSE" time="1641582846"/>
+<taskend task="NSE" time="1641582846"/>
+<taskbegin task="NSE" time="1641582846"/>
+<taskend task="NSE" time="1641582846"/>
+<taskbegin task="SYN Stealth Scan" time="1641582846"/>
+<taskend task="SYN Stealth Scan" time="1641582846" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1641582846"/>
+<taskend task="Service scan" time="1641582852" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1641582852"/>
+<taskend task="NSE" time="1641582853"/>
+<taskbegin task="NSE" time="1641582853"/>
+<taskend task="NSE" time="1641582854"/>
+<taskbegin task="NSE" time="1641582854"/>
+<taskend task="NSE" time="1641582854"/>
+<host starttime="1641582846" endtime="1641582854"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.24" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.2" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 e9:75:c1:e4:b3:63:3c:93:f2:c6:18:08:36:48:ce:36 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDo4pezhJs9c3u8vPWIL9eW4qxQOrHCslAdMftg/p1HDLCKc+9otg+MmQMlxF7jzEu8vJ0GPfg5ONRxlsfx1mwmAXmKLh9GK4WD2pFbg4iFiAO/BAUjs3dNdR1S9wR6F+yRc2jgIyKFJO3JohZZFnM6BrTkZO7+IkSF6b3z2qzaWorHZW04XHdbxKjVCHpU5ewWQ5B32ScKRJE8bsi04Z2lE5vk1NWK15gOqmuyEBK8fcQpD1zCI6bPc5qZlwrRv4r4krCb1h8zYtAwVnoZdtYVopfACgWHxqe+/8YqS8qo4nPfEXq8LkUc2VWmFztWMCBuwVFvW8Pf34VDD4dEiIwz&#xa;  256 87:00:ab:a9:8f:6f:4b:ba:fb:c6:7a:55:a8:60:b2:68 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLrPH0YEefX9y/Kyg9prbVSPe3U7fH06/909UK8mAIm3eb6PWCCwXYC7xZcow1ILYvxF1GTaXYTHeDF6VqX0dzc=&#xa;  256 b6:1b:5c:a9:26:5c:dc:61:b7:75:90:6c:88:51:6e:54 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA+vUE7P+f2aiWmwJRuLE2qsDHrzJUzJLleMvKmIHoKM"><table>
+<elem key="fingerprint">e975c1e4b3633c93f2c618083648ce36</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDo4pezhJs9c3u8vPWIL9eW4qxQOrHCslAdMftg/p1HDLCKc+9otg+MmQMlxF7jzEu8vJ0GPfg5ONRxlsfx1mwmAXmKLh9GK4WD2pFbg4iFiAO/BAUjs3dNdR1S9wR6F+yRc2jgIyKFJO3JohZZFnM6BrTkZO7+IkSF6b3z2qzaWorHZW04XHdbxKjVCHpU5ewWQ5B32ScKRJE8bsi04Z2lE5vk1NWK15gOqmuyEBK8fcQpD1zCI6bPc5qZlwrRv4r4krCb1h8zYtAwVnoZdtYVopfACgWHxqe+/8YqS8qo4nPfEXq8LkUc2VWmFztWMCBuwVFvW8Pf34VDD4dEiIwz</elem>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="fingerprint">8700aba98f6f4bbafbc67a55a860b268</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLrPH0YEefX9y/Kyg9prbVSPe3U7fH06/909UK8mAIm3eb6PWCCwXYC7xZcow1ILYvxF1GTaXYTHeDF6VqX0dzc=</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="fingerprint">b61b5ca9265cdc61b775906c88516e54</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIA+vUE7P+f2aiWmwJRuLE2qsDHrzJUzJLleMvKmIHoKM</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.10.0 (Ubuntu)"><elem>nginx/1.10.0 (Ubuntu)</elem>
+</script><script id="http-title" output=" HTB Hairdresser "><elem key="title"> HTB Hairdresser </elem>
+</script></port>
+</ports>
+<times srtt="25671" rttvar="19257" to="102699"/>
+</host>
+<taskbegin task="NSE" time="1641582854"/>
+<taskend task="NSE" time="1641582854"/>
+<taskbegin task="NSE" time="1641582854"/>
+<taskend task="NSE" time="1641582854"/>
+<taskbegin task="NSE" time="1641582854"/>
+<taskend task="NSE" time="1641582854"/>
+<runstats><finished time="1641582854" timestr="Fri Jan  7 14:14:14 2022" summary="Nmap done at Fri Jan  7 14:14:14 2022; 1 IP address (1 host up) scanned in 10.32 seconds" elapsed="10.32" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

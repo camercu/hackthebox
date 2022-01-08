@@ -1,0 +1,16 @@
+# Nmap 7.92 scan initiated Fri Jan  7 14:38:47 2022 as: nmap -n -v -sU -T4 --top-ports=20 -sV --reason --open -oA udp-top20 10.10.10.24
+Nmap scan report for 10.10.10.24
+Host is up, received echo-reply ttl 63 (0.049s latency).
+Not shown: 13 closed udp ports (port-unreach)
+PORT      STATE         SERVICE      REASON      VERSION
+135/udp   open|filtered msrpc        no-response
+137/udp   open|filtered netbios-ns   no-response
+139/udp   open|filtered netbios-ssn  no-response
+445/udp   open|filtered microsoft-ds no-response
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  open|filtered upnp         no-response
+49152/udp open|filtered unknown      no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan  7 14:40:01 2022 -- 1 IP address (1 host up) scanned in 73.62 seconds

@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Fri Jan  7 14:38:47 2022 as: nmap -n -v -sU -T4 --top-ports=20 -sV --reason --open -oA udp-top20 10.10.10.24
+# Ports scanned: TCP(0;) UDP(20;53,67-69,123,135,137-139,161-162,445,500,514,520,631,1434,1900,4500,49152) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.24 ()	Status: Up
+Host: 10.10.10.24 ()	Ports: 135/open|filtered/udp//msrpc///, 137/open|filtered/udp//netbios-ns///, 139/open|filtered/udp//netbios-ssn///, 445/open|filtered/udp//microsoft-ds///, 1434/open|filtered/udp//ms-sql-m///, 1900/open|filtered/udp//upnp///, 49152/open|filtered/udp//unknown///	Ignored State: closed (13)
+# Nmap done at Fri Jan  7 14:40:01 2022 -- 1 IP address (1 host up) scanned in 73.62 seconds
