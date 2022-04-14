@@ -883,7 +883,7 @@ And now we can log in as root over ssh!
 ```sh
 ❯ ssh root@10.10.10.123 -i ~/.ssh/backdoor
 
-cat root.txt 
+cat root.txt
 b0e6c60b82cf96e9855ac1656a9e90c7
 ```
 
