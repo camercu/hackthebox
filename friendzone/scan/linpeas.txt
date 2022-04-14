@@ -1,0 +1,1324 @@
+
+                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+                    ▄▄▄▄▄▄▄             ▄▄▄▄▄▄▄▄
+             ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄
+         ▄▄▄▄     ▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄
+         ▄    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄          ▄▄▄▄▄▄               ▄▄▄▄▄▄ ▄
+         ▄▄▄▄▄▄              ▄▄▄▄▄▄▄▄                 ▄▄▄▄
+         ▄▄                  ▄▄▄ ▄▄▄▄▄                  ▄▄▄
+         ▄▄                ▄▄▄▄▄▄▄▄▄▄▄▄                  ▄▄
+         ▄            ▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   ▄▄
+         ▄      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄                                ▄▄▄▄
+         ▄▄▄▄▄  ▄▄▄▄▄                       ▄▄▄▄▄▄     ▄▄▄▄
+         ▄▄▄▄   ▄▄▄▄▄                       ▄▄▄▄▄      ▄ ▄▄
+         ▄▄▄▄▄  ▄▄▄▄▄        ▄▄▄▄▄▄▄        ▄▄▄▄▄     ▄▄▄▄▄
+         ▄▄▄▄▄▄  ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄   ▄▄▄▄▄
+          ▄▄▄▄▄▄▄▄▄▄▄▄▄▄        ▄          ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄                       ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄                         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+          ▀▀▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▀▀▀▀▀▀
+               ▀▀▀▄▄▄▄▄      ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▀▀
+                     ▀▀▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀▀▀
+
+    /---------------------------------------------------------------------------\
+    |                             Do you like PEASS?                            |
+    |---------------------------------------------------------------------------|
+    |         Get latest LinPEAS  :     https://github.com/sponsors/carlospolop |
+    |         Follow on Twitter   :     @carlospolopm                           |
+    |         Respect on HTB      :     SirBroccoli                             |
+    |---------------------------------------------------------------------------|
+    |                                 Thank you!                                |
+    \---------------------------------------------------------------------------/
+          linpeas-ng by carlospolop
+
+ADVISORY: This script should be used for authorized penetration testing and/or educational purposes only. Any misuse of this software will not be the responsibility of the author or of any other collaborator. Use it at your own computers and/or with the computer owner's permission.
+
+Linux Privesc Checklist: https://book.hacktricks.xyz/linux-unix/linux-privilege-escalation-checklist
+ LEGEND:
+  RED/YELLOW: 95% a PE vector
+  RED: You should take a look to it
+  LightCyan: Users with console
+  Blue: Users without console & mounted devs
+  Green: Common things (users, groups, SUID/SGID, mounts, .sh scripts, cronjobs)
+  LightMagenta: Your username
+
+ Starting linpeas. Caching Writable Folders...
+
+                                         ╔═══════════════════╗
+═════════════════════════════════════════╣ Basic information ╠═════════════════════════════════════════
+                                         ╚═══════════════════╝
+OS: Linux version 4.15.0-36-generic (buildd@lgw01-amd64-031) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #39-Ubuntu SMP Mon Sep 24 16:19:09 UTC 2018
+User & Groups: uid=33(www-data) gid=33(www-data) groups=33(www-data)
+Hostname: FriendZone
+Writable folder: /dev/shm
+[+] /bin/ping is available for network discovery (linpeas can discover hosts, learn more with -h)
+[+] /bin/nc is available for network discover & port scanning (linpeas can discover hosts and scan ports, learn more with -h)
+
+
+Caching directories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . DONE
+
+                                        ╔════════════════════╗
+════════════════════════════════════════╣ System Information ╠════════════════════════════════════════
+                                        ╚════════════════════╝
+╔══════════╣ Operative system
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#kernel-exploits
+Linux version 4.15.0-36-generic (buildd@lgw01-amd64-031) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #39-Ubuntu SMP Mon Sep 24 16:19:09 UTC 2018
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.1 LTS
+Release:	18.04
+Codename:	bionic
+
+╔══════════╣ Sudo version
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#sudo-version
+Sudo version 1.8.21p2
+
+╔══════════╣ CVEs Check
+Unit polkit.service could not be found.
+./linpeas.sh: 1192: ./linpeas.sh: [[: not found
+./linpeas.sh: 1192: ./linpeas.sh: rpm: not found
+./linpeas.sh: 1192: ./linpeas.sh: 0: not found
+./linpeas.sh: 1202: ./linpeas.sh: [[: not found
+
+
+╔══════════╣ PATH
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#writable-path-abuses
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+New path exported: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+╔══════════╣ Date & uptime
+Wed Apr 13 05:26:23 EEST 2022
+ 05:26:23 up 12 min,  0 users,  load average: 0.08, 0.02, 0.01
+
+╔══════════╣ Any sd*/disk* disk in /dev? (limit 20)
+disk
+sda
+sda1
+
+╔══════════╣ Unmounted file-system?
+╚ Check if you can mount unmounted devices
+UUID=6866a7bf-1c66-4a90-9368-cd99788a8d4a /               ext4    errors=remount-ro 0       1
+/swapfile                                 none            swap    sw              0       0
+
+╔══════════╣ Environment
+╚ Any private information inside environment variables?
+HISTFILESIZE=0
+SHLVL=1
+OLDPWD=/var/www/admin
+_=./linpeas.sh
+TERM=xterm-256color
+HISTSIZE=0
+PWD=/tmp
+HISTFILE=/dev/null
+
+╔══════════╣ Searching Signature verification failed in dmesg
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#dmesg-signature-verification-failed
+dmesg Not Found
+
+╔══════════╣ Executing Linux Exploit Suggester
+╚ https://github.com/mzet-/linux-exploit-suggester
+cat: write error: Broken pipe
+cat: write error: Broken pipe
+cat: write error: Broken pipe
+[+] [CVE-2021-3156] sudo Baron Samedit
+
+   Details: https://www.qualys.com/2021/01/26/cve-2021-3156/baron-samedit-heap-based-overflow-sudo.txt
+   Exposure: probable
+   Tags: mint=19,[ ubuntu=18|20 ], debian=10
+   Download URL: https://codeload.github.com/blasty/CVE-2021-3156/zip/main
+
+[+] [CVE-2021-3156] sudo Baron Samedit 2
+
+   Details: https://www.qualys.com/2021/01/26/cve-2021-3156/baron-samedit-heap-based-overflow-sudo.txt
+   Exposure: probable
+   Tags: centos=6|7|8,[ ubuntu=14|16|17|18|19|20 ], debian=9|10
+   Download URL: https://codeload.github.com/worawit/CVE-2021-3156/zip/main
+
+[+] [CVE-2021-22555] Netfilter heap out-of-bounds write
+
+   Details: https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html
+   Exposure: less probable
+   Tags: ubuntu=20.04{kernel:5.8.0-*}
+   Download URL: https://raw.githubusercontent.com/google/security-research/master/pocs/linux/cve-2021-22555/exploit.c
+   ext-url: https://raw.githubusercontent.com/bcoles/kernel-exploits/master/CVE-2021-22555/exploit.c
+   Comments: ip_tables kernel module must be loaded
+
+[+] [CVE-2019-18634] sudo pwfeedback
+
+   Details: https://dylankatz.com/Analysis-of-CVE-2019-18634/
+   Exposure: less probable
+   Tags: mint=19
+   Download URL: https://github.com/saleemrashid/sudo-cve-2019-18634/raw/master/exploit.c
+   Comments: sudo configuration requires pwfeedback to be enabled.
+
+[+] [CVE-2019-15666] XFRM_UAF
+
+   Details: https://duasynt.com/blog/ubuntu-centos-redhat-privesc
+   Exposure: less probable
+   Download URL:
+   Comments: CONFIG_USER_NS needs to be enabled; CONFIG_XFRM needs to be enabled
+
+[+] [CVE-2019-10149] raptor_exim_wiz
+
+   Details: https://www.qualys.com/2019/06/05/cve-2019-10149/return-wizard-rce-exim.txt
+   Exposure: less probable
+   Download URL: https://www.exploit-db.com/download/46996
+
+[+] [CVE-2017-0358] ntfs-3g-modprobe
+
+   Details: https://bugs.chromium.org/p/project-zero/issues/detail?id=1072
+   Exposure: less probable
+   Tags: ubuntu=16.04{ntfs-3g:2015.3.14AR.1-1build1},debian=7.0{ntfs-3g:2012.1.15AR.5-2.1+deb7u2},debian=8.0{ntfs-3g:2014.2.15AR.2-1+deb8u2}
+   Download URL: https://github.com/offensive-security/exploit-database-bin-sploits/raw/master/bin-sploits/41356.zip
+   Comments: Distros use own versioning scheme. Manual verification needed. Linux headers must be installed. System must have at least two CPU cores.
+
+
+╔══════════╣ Executing Linux Exploit Suggester 2
+╚ https://github.com/jondonas/linux-exploit-suggester-2
+
+╔══════════╣ Protections
+═╣ AppArmor enabled? .............. You do not have enough privilege to read the profile set.
+apparmor module is loaded.
+═╣ grsecurity present? ............ grsecurity Not Found
+═╣ PaX bins present? .............. PaX Not Found
+═╣ Execshield enabled? ............ Execshield Not Found
+═╣ SELinux enabled? ............... sestatus Not Found
+═╣ Is ASLR enabled? ............... Yes
+═╣ Printer? ....................... No
+═╣ Is this a virtual machine? ..... Yes (vmware)
+
+                                             ╔═══════════╗
+═════════════════════════════════════════════╣ Container ╠═════════════════════════════════════════════
+                                             ╚═══════════╝
+╔══════════╣ Container related tools present
+╔══════════╣ Container details
+═╣ Is this a container? ........... No
+═╣ Any running containers? ........ No
+
+
+                          ╔════════════════════════════════════════════════╗
+══════════════════════════╣ Processes, Crons, Timers, Services and Sockets ╠══════════════════════════
+                          ╚════════════════════════════════════════════════╝
+╔══════════╣ Cleaned processes
+╚ Check weird & unexpected proceses run by root: https://book.hacktricks.xyz/linux-unix/privilege-escalation#processes
+root          1  0.2  0.9 159444  8840 ?        Ss   05:14   0:01 /sbin/init splash
+root        236  0.0  1.1 192524 10488 ?        Ssl  05:14   0:00 /usr/bin/vmtoolsd
+root        245  0.0  1.4  94844 13764 ?        S<s  05:14   0:00 /lib/systemd/systemd-journald
+root        262  0.0  0.4  45056  4004 ?        Ss   05:14   0:00 /lib/systemd/systemd-udevd
+systemd+    274  0.2  0.5  71820  5340 ?        Ss   05:14   0:01 /lib/systemd/systemd-networkd
+  └─(Caps) 0x0000000000003c00=cap_net_bind_service,cap_net_broadcast,cap_net_admin,cap_net_raw
+systemd+    374  0.0  0.3 141912  3216 ?        Ssl  05:14   0:00 /lib/systemd/systemd-timesyncd
+  └─(Caps) 0x0000000002000000=cap_sys_time
+systemd+    375  0.0  0.6  70872  6284 ?        Ss   05:14   0:00 /lib/systemd/systemd-resolved
+root        380  0.0  0.3  31320  3292 ?        Ss   05:14   0:00 /usr/sbin/cron -f
+root        381  0.0  1.0  87740  9812 ?        Ss   05:14   0:00 /usr/bin/VGAuthService
+root        382  0.0  0.7 287540  6908 ?        Ssl  05:14   0:00 /usr/lib/accountsservice/accounts-daemon[0m
+syslog      383  0.0  0.4 263036  4300 ?        Ssl  05:14   0:00 /usr/sbin/rsyslogd -n
+root        386  0.0  0.6  62004  5624 ?        Ss   05:14   0:00 /lib/systemd/systemd-logind
+message+    387  0.0  0.4  50028  4392 ?        Ss   05:14   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  └─(Caps) 0x0000000020000000=cap_audit_write
+root        392  0.0  1.8 170408 17144 ?        Ssl  05:14   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+bind        464  0.0  2.2 216300 20408 ?        Ssl  05:14   0:00 /usr/sbin/named -f -4 -u bind
+  └─(Caps) 0x0000000001000400=cap_net_bind_service,cap_sys_resource
+root        478  0.0  0.6  72296  5676 ?        Ss   05:14   0:00 /usr/sbin/sshd -D
+root        481  0.0  0.2  28676  2752 ?        Ss   05:14   0:00 /usr/sbin/vsftpd /etc/vsftpd.conf
+root        487  0.0  0.2  16180  2028 tty1     Ss+  05:14   0:00 /sbin/agetty -o -p -- u --noclear tty1 linux
+root        491  0.0  2.1 333800 19328 ?        Ss   05:14   0:00 /usr/sbin/apache2 -k start
+www-data    494  0.0  2.0 338588 18656 ?        S    05:14   0:00  _ /usr/sbin/apache2 -k start
+www-data    495  0.0  1.9 338592 18308 ?        S    05:14   0:00  _ /usr/sbin/apache2 -k start
+www-data    496  0.0  1.9 338592 17736 ?        S    05:14   0:00  _ /usr/sbin/apache2 -k start
+www-data    497  0.0  1.9 338588 17700 ?        S    05:14   0:00  _ /usr/sbin/apache2 -k start
+www-data    498  0.0  1.9 338588 17708 ?        S    05:14   0:00  _ /usr/sbin/apache2 -k start
+www-data    951  0.0  1.9 338588 17668 ?        S    05:20   0:00  _ /usr/sbin/apache2 -k start
+root        573  0.0  1.2 265344 11888 ?        Ss   05:14   0:00 /usr/sbin/nmbd --foreground --no-process-group
+root        750  0.0  2.2 357068 20520 ?        Ss   05:14   0:00 /usr/sbin/smbd --foreground --no-process-group
+root        853  0.0  0.6 345028  6016 ?        S    05:14   0:00  _ /usr/sbin/smbd --foreground --no-process-group
+root        854  0.0  0.5 345052  4700 ?        S    05:14   0:00  _ /usr/sbin/smbd --foreground --no-process-group
+root        860  0.0  0.6 357052  5916 ?        S    05:14   0:00  _ /usr/sbin/smbd --foreground --no-process-group
+Debian-+    862  0.0  0.4  65644  4424 ?        Ss   05:14   0:00 /usr/sbin/exim4 -bd -q30m
+www-data    978  0.0  0.0   4628   812 ?        S    05:23   0:00 //bin/sh
+www-data    982  0.0  0.7  33216  7120 ?        S    05:24   0:00  _ python -c import pty;pty.spawn("/bin/bash")
+www-data    983  0.0  0.3  18508  3368 pts/0    Ss   05:24   0:00      _ /bin/bash
+www-data   1004  0.3  0.2   5668  2716 pts/0    S+   05:26   0:00          _ /bin/sh ./linpeas.sh
+www-data   3869  0.0  0.1   5668  1068 pts/0    S+   05:26   0:00              _ /bin/sh ./linpeas.sh
+www-data   3873  0.0  0.3  36840  3320 pts/0    R+   05:26   0:00              |   _ ps fauxwww
+www-data   3872  0.0  0.1   5668  1068 pts/0    S+   05:26   0:00              _ /bin/sh ./linpeas.sh
+www-data    995  0.0  0.0   4628   776 ?        S    05:25   0:00 //bin/sh
+www-data    996  0.0  0.7  33084  7196 ?        S    05:25   0:00  _ python -c import pty;pty.spawn("/bin/bash")
+www-data    997  0.0  0.3  18508  3340 pts/1    Ss+  05:25   0:00      _ /bin/bash
+
+╔══════════╣ Binary processes permissions (non 'root root' and not belonging to current user)
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#processes
+
+╔══════════╣ Files opened by processes belonging to other users
+╚ This is usually empty because of the lack of privileges to read other user processes information
+COMMAND    PID TID             USER   FD      TYPE DEVICE SIZE/OFF   NODE NAME
+
+╔══════════╣ Processes with credentials in memory (root req)
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#credentials-from-process-memory
+gdm-password Not Found
+gnome-keyring-daemon Not Found
+lightdm Not Found
+vsftpd process found (dump creds from memory as root)
+apache2 process found (dump creds from memory as root)
+sshd Not Found
+
+╔══════════╣ Cron jobs
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#scheduled-cron-jobs
+/usr/bin/crontab
+incrontab Not Found
+-rw-r--r-- 1 root root     722 Nov 16  2017 /etc/crontab
+
+/etc/cron.d:
+total 20
+drwxr-xr-x  2 root root 4096 Oct  6  2018 .
+drwxr-xr-x 90 root root 4096 Jan 23  2019 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+-rw-r--r--  1 root root  712 Jan 18  2018 php
+-rw-r--r--  1 root root  191 Oct  5  2018 popularity-contest
+
+/etc/cron.daily:
+total 64
+drwxr-xr-x  2 root root 4096 Oct  6  2018 .
+drwxr-xr-x 90 root root 4096 Jan 23  2019 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+-rwxr-xr-x  1 root root  539 Jun 27  2018 apache2
+-rwxr-xr-x  1 root root 1478 Apr 20  2018 apt-compat
+-rwxr-xr-x  1 root root  355 Dec 29  2017 bsdmainutils
+-rwxr-xr-x  1 root root 1176 Nov  3  2017 dpkg
+-rwxr-xr-x  1 root root 4128 Jan 28  2018 exim4-base
+-rwxr-xr-x  1 root root  372 Aug 21  2017 logrotate
+-rwxr-xr-x  1 root root 1065 Apr  7  2018 man-db
+-rwxr-xr-x  1 root root  538 Mar  1  2018 mlocate
+-rwxr-xr-x  1 root root  249 Jan 25  2018 passwd
+-rwxr-xr-x  1 root root 3477 Feb 21  2018 popularity-contest
+-rwxr-xr-x  1 root root  383 Apr 18  2018 samba
+-rwxr-xr-x  1 root root  246 Mar 21  2018 ubuntu-advantage-tools
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Oct  5  2018 .
+drwxr-xr-x 90 root root 4096 Jan 23  2019 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+
+/etc/cron.monthly:
+total 12
+drwxr-xr-x  2 root root 4096 Oct  5  2018 .
+drwxr-xr-x 90 root root 4096 Jan 23  2019 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+
+/etc/cron.weekly:
+total 16
+drwxr-xr-x  2 root root 4096 Oct  5  2018 .
+drwxr-xr-x 90 root root 4096 Jan 23  2019 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+-rwxr-xr-x  1 root root  723 Apr  7  2018 man-db
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+
+╔══════════╣ Systemd PATH
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#systemd-path-relative-paths
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+╔══════════╣ Analyzing .service files
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#services
+/etc/systemd/system/emergency.target.wants/friendly-recovery.service is executing some relative path
+/etc/systemd/system/rescue.target.wants/friendly-recovery.service is executing some relative path
+/etc/systemd/system/sysinit.target.wants/friendly-recovery.service is executing some relative path
+/lib/systemd/system/friendly-recovery.service is executing some relative path
+You can't write on systemd PATH
+
+╔══════════╣ System timers
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#timers
+NEXT                          LEFT          LAST                          PASSED               UNIT                         ACTIVATES
+Wed 2022-04-13 05:27:20 EEST  34s left      Thu 2019-01-24 01:18:14 EET   3 years 2 months ago motd-news.timer              motd-news.service
+Wed 2022-04-13 05:29:00 EEST  2min 15s left n/a                           n/a                  systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+Wed 2022-04-13 05:39:00 EEST  12min left    Wed 2022-04-13 05:14:05 EEST  12min ago            phpsessionclean.timer        phpsessionclean.service
+Wed 2022-04-13 06:39:01 EEST  1h 12min left Wed 2022-04-13 05:14:05 EEST  12min ago            apt-daily-upgrade.timer      apt-daily-upgrade.service
+Wed 2022-04-13 07:43:17 EEST  2h 16min left Wed 2022-04-13 05:14:05 EEST  12min ago            apt-daily.timer              apt-daily.service
+Mon 2022-04-18 00:00:00 EEST  4 days left   Wed 2022-04-13 05:14:05 EEST  12min ago            fstrim.timer                 fstrim.service
+n/a                           n/a           n/a                           n/a                  ureadahead-stop.timer        ureadahead-stop.service
+
+╔══════════╣ Analyzing .timer files
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#timers
+
+╔══════════╣ Analyzing .socket files
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#sockets
+/etc/systemd/system/sockets.target.wants/uuidd.socket is calling this writable listener: /run/uuidd/request
+/lib/systemd/system/dbus.socket is calling this writable listener: /var/run/dbus/system_bus_socket
+/lib/systemd/system/sockets.target.wants/dbus.socket is calling this writable listener: /var/run/dbus/system_bus_socket
+/lib/systemd/system/sockets.target.wants/systemd-journald-dev-log.socket is calling this writable listener: /run/systemd/journal/dev-log
+/lib/systemd/system/sockets.target.wants/systemd-journald.socket is calling this writable listener: /run/systemd/journal/stdout
+/lib/systemd/system/sockets.target.wants/systemd-journald.socket is calling this writable listener: /run/systemd/journal/socket
+/lib/systemd/system/syslog.socket is calling this writable listener: /run/systemd/journal/syslog
+/lib/systemd/system/systemd-journald-dev-log.socket is calling this writable listener: /run/systemd/journal/dev-log
+/lib/systemd/system/systemd-journald.socket is calling this writable listener: /run/systemd/journal/stdout
+/lib/systemd/system/systemd-journald.socket is calling this writable listener: /run/systemd/journal/socket
+/lib/systemd/system/uuidd.socket is calling this writable listener: /run/uuidd/request
+
+╔══════════╣ Unix Sockets Listening
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#sockets
+/run/dbus/system_bus_socket
+  └─(Read Write)
+/run/samba/nmbd/unexpected
+  └─(Read Write)
+/run/systemd/fsck.progress
+/run/systemd/journal/dev-log
+  └─(Read Write)
+/run/systemd/journal/socket
+  └─(Read Write)
+/run/systemd/journal/stdout
+  └─(Read Write)
+/run/systemd/journal/syslog
+  └─(Read Write)
+/run/systemd/notify
+  └─(Read Write)
+/run/systemd/private
+  └─(Read Write)
+/run/udev/control
+/run/uuidd/request
+  └─(Read Write)
+/run/vmware/guestServicePipe
+  └─(Read Write)
+/var/run/dbus/system_bus_socket
+  └─(Read Write)
+/var/run/samba/nmbd/unexpected
+  └─(Read Write)
+/var/run/vmware/guestServicePipe
+  └─(Read Write)
+
+╔══════════╣ D-Bus config files
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#d-bus
+
+╔══════════╣ D-Bus Service Objects list
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#d-bus
+NAME                               PID PROCESS         USER             CONNECTION    UNIT                      SESSION    DESCRIPTION
+:1.0                                 1 systemd         root             :1.0          init.scope                -          -
+:1.1                               386 systemd-logind  root             :1.1          systemd-logind.service    -          -
+:1.19                             6186 busctl          www-data         :1.19         apache2.service           -          -
+:1.2                               382 accounts-daemon[0m root             :1.2          accounts-daemon.service   -          -
+:1.3                               375 systemd-resolve systemd-resolve  :1.3          systemd-resolved.service  -          -
+:1.4                               392 networkd-dispat root             :1.4          networkd-dispatcher.se…ce -          -
+:1.5                               274 systemd-network systemd-network  :1.5          systemd-networkd.service  -          -
+:1.6                               750 smbd            root             :1.6          smbd.service              -          -
+com.ubuntu.LanguageSelector          - -               -                (activatable) -                         -
+org.freedesktop.Accounts           382 accounts-daemon[0m root             :1.2          accounts-daemon.service   -          -
+org.freedesktop.DBus                 1 systemd         root             -             init.scope                -          -
+org.freedesktop.hostname1            - -               -                (activatable) -                         -
+org.freedesktop.locale1              - -               -                (activatable) -                         -
+org.freedesktop.login1             386 systemd-logind  root             :1.1          systemd-logind.service    -          -
+org.freedesktop.network1           274 systemd-network systemd-network  :1.5          systemd-networkd.service  -          -
+org.freedesktop.resolve1           375 systemd-resolve systemd-resolve  :1.3          systemd-resolved.service  -          -
+org.freedesktop.systemd1             1 systemd         root             :1.0          init.scope                -          -
+org.freedesktop.timedate1            - -               -                (activatable) -                         -
+
+
+                                        ╔═════════════════════╗
+════════════════════════════════════════╣ Network Information ╠════════════════════════════════════════
+                                        ╚═════════════════════╝
+╔══════════╣ Hostname, hosts and DNS
+FriendZone
+127.0.0.1	localhost
+127.0.1.1       FriendZone
+
+
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+nameserver 127.0.0.53
+
+╔══════════╣ Interfaces
+# symbolic names for networks, see networks(5) for more information
+link-local 169.254.0.0
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.10.123  netmask 255.255.255.0  broadcast 10.10.10.255
+        inet6 dead:beef::250:56ff:feb9:cc7b  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::250:56ff:feb9:cc7b  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:b9:cc:7b  txqueuelen 1000  (Ethernet)
+        RX packets 1648  bytes 915006 (915.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1472  bytes 231350 (231.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 19  base 0x2000
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 797  bytes 53780 (53.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 797  bytes 53780 (53.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+╔══════════╣ Active Ports
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#open-ports
+tcp        0      0 10.10.10.123:53         0.0.0.0:*               LISTEN      -
+tcp        0      0 127.0.0.1:53            0.0.0.0:*               LISTEN      -
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      -
+tcp        0      0 127.0.0.1:953           0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:445             0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:139             0.0.0.0:*               LISTEN      -
+tcp6       0      0 :::21                   :::*                    LISTEN      -
+tcp6       0      0 :::22                   :::*                    LISTEN      -
+tcp6       0      0 ::1:25                  :::*                    LISTEN      -
+tcp6       0      0 :::443                  :::*                    LISTEN      -
+tcp6       0      0 :::445                  :::*                    LISTEN      -
+tcp6       0      0 :::139                  :::*                    LISTEN      -
+tcp6       0      0 :::80                   :::*                    LISTEN      -
+
+╔══════════╣ Can I sniff with tcpdump?
+No
+
+
+
+                                         ╔═══════════════════╗
+═════════════════════════════════════════╣ Users Information ╠═════════════════════════════════════════
+                                         ╚═══════════════════╝
+╔══════════╣ My user
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#users
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+
+╔══════════╣ Do I have PGP keys?
+/usr/bin/gpg
+netpgpkeys Not Found
+netpgp Not Found
+
+╔══════════╣ Checking 'sudo -l', /etc/sudoers, and /etc/sudoers.d
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#sudo-and-suid
+
+╔══════════╣ Checking sudo tokens
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#reusing-sudo-tokens
+ptrace protection is enabled (1)
+gdb wasn't found in PATH, this might still be vulnerable but linpeas won't be able to check it
+
+╔══════════╣ Checking Pkexec policy
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation/interesting-groups-linux-pe#pe-method-2
+
+╔══════════╣ Superusers
+root:x:0:0:root:/root:/bin/bash
+
+╔══════════╣ Users with console
+friend:x:1000:1000:friend,,,:/home/friend:/bin/bash
+root:x:0:0:root:/root:/bin/bash
+
+╔══════════╣ All users & groups
+uid=0(root) gid=0(root) groups=0(root)
+uid=1(daemon[0m) gid=1(daemon[0m) groups=1(daemon[0m)
+uid=10(uucp) gid=10(uucp) groups=10(uucp)
+uid=100(systemd-network) gid=102(systemd-network) groups=102(systemd-network)
+uid=1000(friend) gid=1000(friend) groups=1000(friend),4(adm),24(cdrom),30(dip),46(plugdev),111(lpadmin),112(sambashare)
+uid=101(systemd-resolve) gid=103(systemd-resolve) groups=103(systemd-resolve)
+uid=102(syslog) gid=106(syslog) groups=106(syslog),4(adm)
+uid=103(messagebus) gid=107(messagebus) groups=107(messagebus)
+uid=104(_apt) gid=65534(nogroup) groups=65534(nogroup)
+uid=105(uuidd) gid=109(uuidd) groups=109(uuidd)
+uid=106(sshd) gid=65534(nogroup) groups=65534(nogroup)
+uid=107(Debian-exim) gid=114(Debian-exim) groups=114(Debian-exim)
+uid=108(ftp) gid=115(ftp) groups=115(ftp)
+uid=109(bind) gid=116(bind) groups=116(bind)
+uid=13(proxy) gid=13(proxy) groups=13(proxy)
+uid=2(bin) gid=2(bin) groups=2(bin)
+uid=3(sys) gid=3(sys) groups=3(sys)
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+uid=34(backup) gid=34(backup) groups=34(backup)
+uid=38(list) gid=38(list) groups=38(list)
+uid=39(irc) gid=39(irc) groups=39(irc)
+uid=4(sync) gid=65534(nogroup) groups=65534(nogroup)
+uid=41(gnats) gid=41(gnats) groups=41(gnats)
+uid=5(games) gid=60(games) groups=60(games)
+uid=6(man) gid=12(man) groups=12(man)
+uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup)
+uid=7(lp) gid=7(lp) groups=7(lp)
+uid=8(mail) gid=8(mail) groups=8(mail)
+uid=9(news) gid=9(news) groups=9(news)
+
+╔══════════╣ Login now
+ 05:26:47 up 12 min,  0 users,  load average: 0.05, 0.01, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+
+╔══════════╣ Last logons
+friend   pts/0        Sun Oct  7 03:49:34 2018 - crash                     (14:37)     192.168.1.19
+reboot   system boot  Sun Oct  7 03:48:46 2018 - Wed Oct 10 02:54:21 2018 (2+23:05)    0.0.0.0
+friend   pts/0        Sat Oct  6 12:38:53 2018 - crash                     (15:09)     192.168.1.19
+reboot   system boot  Sat Oct  6 12:38:08 2018 - Wed Oct 10 02:54:21 2018 (3+14:16)    0.0.0.0
+friend   pts/1        Sat Oct  6 01:06:05 2018 - crash                     (11:32)     192.168.1.19
+friend   pts/0        Fri Oct  5 23:50:42 2018 - Sat Oct  6 03:15:17 2018  (03:24)     192.168.178.1
+friend   tty1         Fri Oct  5 23:47:35 2018 - crash                     (12:50)     0.0.0.0
+reboot   system boot  Fri Oct  5 23:46:43 2018 - Wed Oct 10 02:54:21 2018 (4+03:07)    0.0.0.0
+
+wtmp begins Fri Oct  5 23:46:43 2018
+
+╔══════════╣ Last time logon each user
+Username         Port     From             Latest
+root             tty1                      Thu Jan 24 01:12:41 +0200 2019
+friend           pts/0    10.10.14.3       Thu Jan 24 01:20:15 +0200 2019
+
+╔══════════╣ Do not forget to test 'su' as any other user with shell: without password and with their names as password (I can't do it...)
+
+╔══════════╣ Do not forget to execute 'sudo -l' without password or with valid password (if you know it)!!
+
+
+
+                                       ╔══════════════════════╗
+═══════════════════════════════════════╣ Software Information ╠═══════════════════════════════════════
+                                       ╚══════════════════════╝
+╔══════════╣ Useful software
+/usr/bin/base64
+/bin/nc
+/bin/netcat
+/usr/bin/perl
+/usr/bin/php
+/bin/ping
+/usr/bin/python
+/usr/bin/python2
+/usr/bin/python2.7
+/usr/bin/python3
+/usr/bin/python3.6
+/usr/bin/sudo
+/usr/bin/wget
+
+╔══════════╣ Installed Compilers
+/usr/share/gcc-8
+
+╔══════════╣ Searching mysql credentials and exec
+Potential file containing credentials:
+-rw-r--r-- 1 root root 641 Sep 27  2018 /etc/apparmor.d/abstractions/mysql
+Strings not found, cat the file and check it to get the creds
+Found readable /etc/mysql/my.cnf
+!includedir /etc/mysql/conf.d/
+
+╔══════════╣ Analyzing Apache-Nginx Files (limit 70)
+Apache version: Server version: Apache/2.4.29 (Ubuntu)
+Server built:   2018-10-03T14:41:08
+httpd Not Found
+
+Nginx version: nginx Not Found
+
+./linpeas.sh: 2587: ./linpeas.sh: grep -R -B1 "httpd-php" /etc/apache2 2>/dev/null: not found
+══╣ PHP exec extensions
+drwxr-xr-x 2 root root 4096 Oct  6  2018 /etc/apache2/sites-enabled
+drwxr-xr-x 2 root root 4096 Oct  6  2018 /etc/apache2/sites-enabled
+lrwxrwxrwx 1 root root 35 Oct  5  2018 /etc/apache2/sites-enabled/000-default.conf -> ../sites-available/000-default.conf
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    DocumentRoot /var/www/html1
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName friendzone.red
+    ServerAlias friendzone.red
+    DocumentRoot /var/www/friendzone
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName uploads.friendzone.red
+    ServerAlias uploads.friendzone.red
+    DocumentRoot /var/www/uploads
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName administrator1.friendzone.red
+    ServerAlias administrator1.friendzone.red
+    DocumentRoot /var/www/admin
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName friendzoneportal.red
+    ServerAlias friendzoneportal.red
+    DocumentRoot /var/www/friendzoneportal
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName admin.friendzoneportal.red
+    ServerAlias admin.friendzoneportal.red
+    DocumentRoot /var/www/friendzoneportaladmin
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+
+
+-rw-r--r-- 1 root root 3258 Oct  6  2018 /etc/apache2/sites-available/000-default.conf
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    DocumentRoot /var/www/html1
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName friendzone.red
+    ServerAlias friendzone.red
+    DocumentRoot /var/www/friendzone
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName uploads.friendzone.red
+    ServerAlias uploads.friendzone.red
+    DocumentRoot /var/www/uploads
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName administrator1.friendzone.red
+    ServerAlias administrator1.friendzone.red
+    DocumentRoot /var/www/admin
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName friendzoneportal.red
+    ServerAlias friendzoneportal.red
+    DocumentRoot /var/www/friendzoneportal
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName admin.friendzoneportal.red
+    ServerAlias admin.friendzoneportal.red
+    DocumentRoot /var/www/friendzoneportaladmin
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+lrwxrwxrwx 1 root root 35 Oct  5  2018 /etc/apache2/sites-enabled/000-default.conf -> ../sites-available/000-default.conf
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    DocumentRoot /var/www/html1
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName friendzone.red
+    ServerAlias friendzone.red
+    DocumentRoot /var/www/friendzone
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName uploads.friendzone.red
+    ServerAlias uploads.friendzone.red
+    DocumentRoot /var/www/uploads
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName administrator1.friendzone.red
+    ServerAlias administrator1.friendzone.red
+    DocumentRoot /var/www/admin
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName friendzoneportal.red
+    ServerAlias friendzoneportal.red
+    DocumentRoot /var/www/friendzoneportal
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+<VirtualHost _default_:443>
+    ServerAdmin admin@example.com
+    ServerName admin.friendzoneportal.red
+    ServerAlias admin.friendzoneportal.red
+    DocumentRoot /var/www/friendzoneportaladmin
+    SSLEngine on
+    SSLCertificateFile /root/certs/friendzone.red.crt
+    SSLCertificateKeyFile /root/certs/friendzone.red.key
+</VirtualHost>
+
+-rw-r--r-- 1 root root 70973 Sep 13  2018 /etc/php/7.2/apache2/php.ini
+allow_url_fopen = On
+allow_url_include = Off
+odbc.allow_persistent = On
+ibase.allow_persistent = 1
+mysqli.allow_persistent = On
+pgsql.allow_persistent = On
+-rw-r--r-- 1 root root 70585 Sep 13  2018 /etc/php/7.2/cli/php.ini
+allow_url_fopen = On
+allow_url_include = Off
+odbc.allow_persistent = On
+ibase.allow_persistent = 1
+mysqli.allow_persistent = On
+pgsql.allow_persistent = On
+
+╔══════════╣ Analyzing Rsync Files (limit 70)
+-rw-r--r-- 1 root root 1044 Dec 13  2017 /usr/share/doc/rsync/examples/rsyncd.conf
+[ftp]
+	comment = public archive
+	path = /var/www/pub
+	use chroot = yes
+	lock file = /var/lock/rsyncd
+	read only = yes
+	list = yes
+	uid = nobody
+	gid = nogroup
+	strict modes = yes
+	ignore errors = no
+	ignore nonreadable = yes
+	transfer logging = no
+	timeout = 600
+	refuse options = checksum dry-run
+	dont compress = *.gz *.tgz *.zip *.z *.rpm *.deb *.iso *.bz2 *.tbz
+
+
+╔══════════╣ Analyzing Ldap Files (limit 70)
+The password hash is from the {SSHA} to 'structural'
+drwxr-xr-x 2 root root 4096 Oct  5  2018 /etc/ldap
+
+
+╔══════════╣ Searching ssl/ssh files
+PermitRootLogin yes
+ChallengeResponseAuthentication no
+UsePAM yes
+gpg-connect-agent: no running gpg-agent - starting '/usr/bin/gpg-agent'
+gpg-connect-agent: failed to create temporary file '/var/www/.gnupg/.#lk0x000055c5b0d442f0.FriendZone.6684': No such file or directory
+gpg-connect-agent: can't connect to the agent: No such file or directory
+gpg-connect-agent: error sending standard options: No agent running
+══╣ Some home ssh config file was found
+/usr/share/openssh/sshd_config
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+══╣ /etc/hosts.allow file found, trying to read the rules:
+/etc/hosts.allow
+
+
+Searching inside /etc/ssh/ssh_config for interesting info
+Host *
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+
+╔══════════╣ Analyzing PAM Auth Files (limit 70)
+drwxr-xr-x 2 root root 4096 Jan 23  2019 /etc/pam.d
+-rw-r--r-- 1 root root 2133 Feb 10  2018 /etc/pam.d/sshd
+
+
+╔══════════╣ Searching kerberos conf files and tickets
+╚ http://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-active-directory
+ptrace protection is enabled (1), you need to disable it to search for tickets inside processes memory
+-rw-r--r-- 1 root root 89 Jul  4  2017 /usr/share/samba/setup/krb5.conf
+[libdefaults]
+	default_realm = ${REALM}
+	dns_lookup_realm = false
+	dns_lookup_kdc = true
+tickets kerberos Not Found
+klist Not Found
+
+
+
+╔══════════╣ Searching AD cached hashes
+-rw------- 1 root root 430080 Oct  6  2018  /var/lib/samba/private/secrets.tdb
+
+╔══════════╣ Analyzing Keyring Files (limit 70)
+drwxr-xr-x 2 root root 4096 Oct  5  2018 /usr/share/keyrings
+
+
+
+
+╔══════════╣ Searching uncommon passwd files (splunk)
+passwd file: /etc/pam.d/passwd
+passwd file: /etc/passwd
+passwd file: /usr/share/bash-completion/completions/passwd
+passwd file: /usr/share/lintian/overrides/passwd
+
+╔══════════╣ Analyzing PGP-GPG Files (limit 70)
+/usr/bin/gpg
+gpg Not Found
+netpgpkeys Not Found
+netpgp Not Found
+
+-rw-r--r-- 1 root root 2796 Feb  6  2018 /etc/apt/trusted.gpg.d/ubuntu-keyring-2012-archive.gpg
+-rw-r--r-- 1 root root 2794 Feb  6  2018 /etc/apt/trusted.gpg.d/ubuntu-keyring-2012-cdimage.gpg
+-rw-r--r-- 1 root root 3267 Jun 11  2018 /usr/share/gnupg/distsigkey.gpg
+-rw-r--r-- 1 root root 5622 Oct 27  2016 /usr/share/keyrings/ubuntu-archive-keyring.gpg
+-rw-r--r-- 1 root root 6713 Oct 27  2016 /usr/share/keyrings/ubuntu-archive-removed-keys.gpg
+-rw-r--r-- 1 root root 4097 Feb  6  2018 /usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+-rw-r--r-- 1 root root 0 Jan 17  2018 /usr/share/keyrings/ubuntu-cloudimage-removed-keys.gpg
+-rw-r--r-- 1 root root 2253 Mar 21  2018 /usr/share/keyrings/ubuntu-esm-keyring.gpg
+-rw-r--r-- 1 root root 1139 Mar 21  2018 /usr/share/keyrings/ubuntu-fips-keyring.gpg
+-rw-r--r-- 1 root root 1139 Mar 21  2018 /usr/share/keyrings/ubuntu-fips-updates-keyring.gpg
+-rw-r--r-- 1 root root 1227 May 27  2010 /usr/share/keyrings/ubuntu-master-keyring.gpg
+-rw-r--r-- 1 root root 2867 Feb 22  2018 /usr/share/popularity-contest/debian-popcon.gpg
+
+drwx------ 3 friend friend 4096 Oct  6  2018 /home/friend/.gnupg
+
+
+╔══════════╣ Analyzing Postfix Files (limit 70)
+-rw-r--r-- 1 root root 675 Apr  2  2018 /usr/share/bash-completion/completions/postfix
+
+
+╔══════════╣ Analyzing FTP Files (limit 70)
+
+
+-rw-r--r-- 1 root root 69 Sep 13  2018 /etc/php/7.2/mods-available/ftp.ini
+-rw-r--r-- 1 root root 69 Sep 13  2018 /usr/share/php7.2-common/common/ftp.ini
+
+
+
+
+
+
+╔══════════╣ Analyzing Bind Files (limit 70)
+drwxr-sr-x 3 root bind 4096 Oct  6  2018 /etc/bind
+drwxr-sr-x 3 root bind 4096 Oct  6  2018 /etc/bind
+-rw-r--r-- 1 root root 1317 Mar 23  2018 /etc/bind/zones.rfc1918
+-rw-r--r-- 1 root root 271 Mar 23  2018 /etc/bind/db.127
+-rw-r--r-- 1 root root 270 Mar 23  2018 /etc/bind/db.local
+-rw-r----- 1 bind bind 77 Oct  6  2018 /etc/bind/rndc.key
+-rw-r--r-- 1 root root 3171 Mar 23  2018 /etc/bind/db.root
+-rw-r--r-- 1 root bind 1468 Oct  6  2018 /etc/bind/named.conf.options
+drwxr-sr-x 2 root bind 4096 Oct  6  2018 /etc/bind/zones
+-rw-r--r-- 1 root bind 615 Oct  6  2018 /etc/bind/zones/db.friendzoneportal.red
+-rw-r--r-- 1 root bind 587 Oct  6  2018 /etc/bind/zones/db.friendzone
+-rw-r--r-- 1 root bind 490 Mar 23  2018 /etc/bind/named.conf.default-zones
+-rw-r--r-- 1 root root 237 Mar 23  2018 /etc/bind/db.255
+-rw-r--r-- 1 root root 237 Mar 23  2018 /etc/bind/db.0
+-rw-r--r-- 1 root bind 537 Oct  6  2018 /etc/bind/named.conf.local
+-rw-r--r-- 1 root bind 463 Mar 23  2018 /etc/bind/named.conf
+-rw-r--r-- 1 root root 2761 Aug 10  2018 /etc/bind/bind.keys
+-rw-r--r-- 1 root root 353 Mar 23  2018 /etc/bind/db.empty
+
+-rw-r----- 1 bind bind 77 Oct  6  2018 /etc/bind/rndc.key
+
+-rw-r--r-- 1 root root 856 Apr  2  2018 /usr/share/bash-completion/completions/bind
+-rw-r--r-- 1 root root 856 Apr  2  2018 /usr/share/bash-completion/completions/bind
+
+
+drwxrwxr-x 2 root bind 4096 Apr 13 05:14 /var/cache/bind
+drwxrwxr-x 2 root bind 4096 Apr 13 05:14 /var/cache/bind
+-rw-r--r-- 1 bind bind 1421 Apr 13 05:14 /var/cache/bind/managed-keys.bind
+-rw-r--r-- 1 bind bind 512 Apr 13 05:14 /var/cache/bind/managed-keys.bind.jnl
+
+
+drwxrwxr-x 2 root bind 4096 Oct  6  2018 /var/lib/bind
+drwxrwxr-x 2 root bind 4096 Oct  6  2018 /var/lib/bind
+-rw-r--r-- 1 root root 53 Oct  6  2018 /var/lib/bind/bind9-default.md5sum
+
+
+
+╔══════════╣ Analyzing Windows Files (limit 70)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lrwxrwxrwx 1 root root 26 Oct  5  2018 /etc/alternatives/my.cnf -> /etc/mysql/my.cnf.fallback
+lrwxrwxrwx 1 root root 24 Oct  5  2018 /etc/mysql/my.cnf -> /etc/alternatives/my.cnf
+-rw-r--r-- 1 root root 56 Oct  5  2018 /var/lib/dpkg/alternatives/my.cnf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+╔══════════╣ Analyzing Other Interesting Files (limit 70)
+-rw-r--r-- 1 root root 3771 Apr  4  2018 /etc/skel/.bashrc
+-rw-r--r-- 1 friend friend 3771 Oct  5  2018 /home/friend/.bashrc
+
+
+
+
+
+-rw-r--r-- 1 root root 807 Apr  4  2018 /etc/skel/.profile
+-rw-r--r-- 1 friend friend 807 Oct  5  2018 /home/friend/.profile
+
+
+
+-rw-r--r-- 1 friend friend 0 Oct  5  2018 /home/friend/.sudo_as_admin_successful
+
+
+
+                                         ╔═══════════════════╗
+═════════════════════════════════════════╣ Interesting Files ╠═════════════════════════════════════════
+                                         ╚═══════════════════╝
+╔══════════╣ SUID - Check easy privesc, exploits and write perms
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#sudo-and-suid
+strings Not Found
+-rwsr-xr-x 1 root root 31K Aug 11  2016 /bin/fusermount
+-rwsr-xr-x 1 root root 27K May 16  2018 /bin/umount  --->  BSD/Linux(08-1996)
+-rwsr-xr-x 1 root root 43K May 16  2018 /bin/mount  --->  Apple_Mac_OSX(Lion)_Kernel_xnu-1699.32.7_except_xnu-1699.24.8
+-rwsr-xr-x 1 root root 44K Jan 25  2018 /bin/su
+-rwsr-xr-x 1 root root 143K Nov 30  2017 /bin/ntfs-3g  --->  Debian9/8/7/Ubuntu/Gentoo/others/Ubuntu_Server_16.10_and_others(02-2017)
+-rwsr-xr-x 1 root root 63K Mar 10  2017 /bin/ping
+-rwsr-xr-x 1 root root 59K Jan 25  2018 /usr/bin/passwd  --->  Apple_Mac_OSX(03-2006)/Solaris_8/9(12-2004)/SPARC_8/9/Sun_Solaris_2.3_to_2.5.1(02-1997)
+-rwsr-xr-x 1 root root 19K Mar 10  2017 /usr/bin/traceroute6.iputils
+-rwsr-xr-x 1 root root 40K Jan 25  2018 /usr/bin/newgrp  --->  HP-UX_10.20
+-rwsr-xr-x 1 root root 146K Jan 18  2018 /usr/bin/sudo  --->  check_if_the_sudo_version_is_vulnerable
+-rwsr-xr-x 1 root root 75K Jan 25  2018 /usr/bin/gpasswd
+-rwsr-xr-x 1 root root 44K Jan 25  2018 /usr/bin/chsh
+-rwsr-xr-x 1 root root 75K Jan 25  2018 /usr/bin/chfn  --->  SuSE_9.3/10
+-rwsr-xr-x 1 root root 1.1M Feb 14  2018 /usr/sbin/exim4
+-rwsr-xr-- 1 root messagebus 42K Nov 16  2017 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+-rwsr-xr-x 1 root root 10K Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+-rwsr-xr-x 1 root root 427K Feb 10  2018 /usr/lib/openssh/ssh-keysign
+
+╔══════════╣ SGID
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#sudo-and-suid
+-rwxr-sr-x 1 root shadow 34K Apr  5  2018 /sbin/pam_extrausers_chkpwd
+-rwxr-sr-x 1 root shadow 34K Apr  5  2018 /sbin/unix_chkpwd
+-rwxr-sr-x 1 root ssh 355K Feb 10  2018 /usr/bin/ssh-agent
+-rwxr-sr-x 1 root tty 31K May 16  2018 /usr/bin/wall
+-rwxr-sr-x 1 root shadow 23K Jan 25  2018 /usr/bin/expiry
+-rwxr-sr-x 1 root mlocate 43K Mar  1  2018 /usr/bin/mlocate
+-rwxr-sr-x 1 root mail 11K Nov  7  2017 /usr/bin/dotlock.mailutils
+-rwxr-sr-x 1 root crontab 39K Nov 16  2017 /usr/bin/crontab
+-rwxr-sr-x 1 root tty 14K Jan 17  2018 /usr/bin/bsd-write
+-rwxr-sr-x 1 root shadow 71K Jan 25  2018 /usr/bin/chage
+
+╔══════════╣ Checking misconfigurations of ld.so
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#ld-so
+/etc/ld.so.conf
+include /etc/ld.so.conf.d/*.conf
+
+/etc/ld.so.conf.d
+  /etc/ld.so.conf.d/libc.conf
+/usr/local/lib
+  /etc/ld.so.conf.d/x86_64-linux-gnu.conf
+/usr/local/lib/x86_64-linux-gnu
+/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu
+
+╔══════════╣ Capabilities
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#capabilities
+Current capabilities:
+Current: =
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+
+Shell capabilities:
+0x0000000000000000=
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+
+Files with capabilities (limited to 50):
+/usr/bin/mtr-packet = cap_net_raw+ep
+
+╔══════════╣ Users with capabilities
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#capabilities
+
+╔══════════╣ Files with ACLs (limited to 50)
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#acls
+files with acls in searched folders Not Found
+
+╔══════════╣ .sh files in path
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#script-binaries-in-path
+/usr/bin/gettext.sh
+
+╔══════════╣ Unexpected in /opt (usually empty)
+total 12
+drwxr-xr-x  3 root root 4096 Oct  6  2018 .
+drwxr-xr-x 22 root root 4096 Oct  5  2018 ..
+drwxr-xr-x  2 root root 4096 Jan 24  2019 server_admin
+
+╔══════════╣ Unexpected in root
+/swapfile
+/vmlinuz.old
+/initrd.img.old
+/vmlinuz
+/initrd.img
+
+╔══════════╣ Files (scripts) in /etc/profile.d/
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#profiles-files
+total 20
+drwxr-xr-x  2 root root 4096 Oct  5  2018 .
+drwxr-xr-x 90 root root 4096 Jan 23  2019 ..
+-rw-r--r--  1 root root   96 Aug 20  2018 01-locale-fix.sh
+-rw-r--r--  1 root root  664 Apr  2  2018 bash_completion.sh
+-rw-r--r--  1 root root 1003 Dec 29  2015 cedilla-portuguese.sh
+
+╔══════════╣ Permissions in init, init.d, systemd, and rc.d
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#init-init-d-systemd-and-rc-d
+
+═╣ Hashes inside passwd file? ........... No
+═╣ Writable passwd file? ................ No
+═╣ Credentials in fstab/mtab? ........... No
+═╣ Can I read shadow files? ............. No
+═╣ Can I read shadow plists? ............ No
+═╣ Can I write shadow plists? ........... No
+═╣ Can I read opasswd file? ............. No
+═╣ Can I write in network-scripts? ...... No
+═╣ Can I read root folder? .............. No
+
+╔══════════╣ Searching root files in home dirs (limit 30)
+/home/
+/home/friend/.bash_history
+/home/friend/user.txt
+/root/
+
+╔══════════╣ Searching folders owned by me containing others files on it (limit 100)
+
+╔══════════╣ Readable files belonging to root and readable by me but not world readable
+
+╔══════════╣ Modified interesting files in the last 5mins (limit 100)
+/etc/Development/ws.php
+/var/cache/samba/browse.dat
+/var/cache/samba/gencache.tdb
+/var/log/auth.log
+/var/log/vsftpd.log
+/var/log/syslog
+/var/log/journal/375f313c89e044bc923af29b0d6042a6/system.journal
+
+╔══════════╣ Writable log files (logrotten) (limit 100)
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#logrotate-exploitation
+
+╔══════════╣ Files inside /home/www-data (limit 20)
+
+╔══════════╣ Files inside others home (limit 20)
+/home/friend/.bash_logout
+/home/friend/.bashrc
+/home/friend/.sudo_as_admin_successful
+/home/friend/.profile
+/home/friend/user.txt
+
+╔══════════╣ Searching installed mail applications
+exim
+
+╔══════════╣ Mails (limit 50)
+   283868      4 -rw-rw----   1 friend   mail            1 Jan 15  2019 /var/mail/friend
+   283868      4 -rw-rw----   1 friend   mail            1 Jan 15  2019 /var/spool/mail/friend
+
+╔══════════╣ Backup folders
+
+╔══════════╣ Backup files (limited 100)
+-rw-r--r-- 1 root root 10918 Oct  5  2018 /var/www/html/index.bak
+-rw-r--r-- 1 root root 7886 Sep 24  2018 /lib/modules/4.15.0-36-generic/kernel/drivers/net/team/team_mode_activebackup.ko
+-rw-r--r-- 1 root root 7838 Sep 24  2018 /lib/modules/4.15.0-36-generic/kernel/drivers/power/supply/wm831x_backup.ko
+-rwxr-xr-x 1 root root 14328 Oct 26  2017 /usr/bin/tdbbackup.tdbtools
+-rw-r--r-- 1 root root 35464 Oct 10  2018 /usr/lib/open-vm-tools/plugins/vmsvc/libvmbackup.so
+-rw-r--r-- 1 root root 0 Sep 24  2018 /usr/src/linux-headers-4.15.0-36-generic/include/config/net/team/mode/activebackup.h
+-rw-r--r-- 1 root root 0 Sep 24  2018 /usr/src/linux-headers-4.15.0-36-generic/include/config/wm831x/backup.h
+-rw-r--r-- 1 root root 216965 Sep 24  2018 /usr/src/linux-headers-4.15.0-36-generic/.config.old
+-rw-r--r-- 1 root root 1663 Oct 26  2017 /usr/share/man/man8/tdbbackup.tdbtools.8.gz
+-rw-r--r-- 1 root root 11270 Oct  6  2018 /usr/share/info/dir.old
+-rw-r--r-- 1 root root 7867 Nov  7  2016 /usr/share/doc/telnet/README.telnet.old.gz
+-rw-r--r-- 1 root root 361345 Feb  2  2018 /usr/share/doc/manpages/Changes.old.gz
+
+╔══════════╣ Searching tables inside readable .db/.sql/.sqlite files (limit 100)
+Found: /var/lib/mlocate/mlocate.db: regular file, no read permission
+
+
+╔══════════╣ Web files?(output limit)
+/var/www/:
+total 36K
+drwxr-xr-x  8 root root 4.0K Oct  6  2018 .
+drwxr-xr-x 12 root root 4.0K Oct  6  2018 ..
+drwxr-xr-x  3 root root 4.0K Jan 16  2019 admin
+drwxr-xr-x  4 root root 4.0K Oct  6  2018 friendzone
+drwxr-xr-x  2 root root 4.0K Oct  6  2018 friendzoneportal
+drwxr-xr-x  2 root root 4.0K Jan 15  2019 friendzoneportaladmin
+drwxr-xr-x  3 root root 4.0K Oct  6  2018 html
+-rw-r--r--  1 root root  116 Oct  6  2018 mysql_data.conf
+
+╔══════════╣ All hidden files (not in /sys/ or the ones listed in the previous check) (limit 70)
+-rw-r--r-- 1 root root 220 Apr  4  2018 /etc/skel/.bash_logout
+-rw-r--r-- 1 root root 1531 Oct  5  2018 /etc/apparmor.d/cache/.features
+-rw------- 1 root root 0 Oct  5  2018 /etc/.pwd.lock
+-rw-r--r-- 1 friend friend 220 Oct  5  2018 /home/friend/.bash_logout
+
+╔══════════╣ Readable files inside /tmp, /var/tmp, /private/tmp, /private/var/at/tmp, /private/var/tmp, and backup folders (limit 70)
+-rwxr-xr-x 1 www-data www-data 776167 Apr 10 08:48 /tmp/linpeas.sh
+-rwxr-xr-x 1 www-data www-data 152 Apr 13 05:15 /tmp/rsh.elf
+-rw-r--r-- 1 root root 9133 Jan 23  2019 /var/backups/apt.extended_states.0
+-rw-r--r-- 1 root root 1042 Oct  6  2018 /var/backups/apt.extended_states.1.gz
+
+╔══════════╣ Interesting writable files owned by me or writable by everyone (not in Home) (max 500)
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#writable-files
+/dev/mqueue
+/dev/shm
+/etc/Development
+/etc/Development/ws.php
+/etc/sambafiles
+/run/lock
+/run/lock/apache2
+/tmp
+/tmp/linpeas.sh
+/tmp/rsh.elf
+/usr/lib/python2.7
+/usr/lib/python2.7/os.py
+/var/cache/apache2/mod_cache_disk
+/var/lib/php/sessions
+/var/spool/samba
+/var/tmp
+
+╔══════════╣ Interesting GROUP writable files (not in Home) (max 500)
+╚ https://book.hacktricks.xyz/linux-unix/privilege-escalation#writable-files
+
+╔══════════╣ Searching passwords in history files
+
+╔══════════╣ Searching *password* or *credential* files in home (limit 70)
+/bin/systemd-ask-password
+/bin/systemd-tty-ask-password-agent
+/etc/bind/rndc.key
+/etc/general/creds.txt
+/etc/pam.d/common-password
+/etc/test/creds.txt
+/usr/lib/grub/i386-pc/legacy_password_test.mod
+/usr/lib/grub/i386-pc/password.mod
+/usr/lib/grub/i386-pc/password_pbkdf2.mod
+/usr/lib/python2.7/dist-packages/samba/credentials.x86_64-linux-gnu.so
+/usr/lib/python2.7/dist-packages/samba/tests/credentials.py
+/usr/lib/python2.7/dist-packages/samba/tests/credentials.pyc
+/usr/lib/python2.7/dist-packages/samba/tests/password_hash.py
+/usr/lib/python2.7/dist-packages/samba/tests/password_hash.pyc
+  #)There are more creds/passwds files in the previous parent folder
+
+/usr/lib/python2.7/dist-packages/samba/tests/samba_tool/user_check_password_script.pyc
+/usr/lib/x86_64-linux-gnu/libsamba-credentials.so.0
+/usr/lib/x86_64-linux-gnu/libsamba-credentials.so.0.0.1
+/usr/lib/x86_64-linux-gnu/samba/ldb/local_password.so
+/usr/lib/x86_64-linux-gnu/samba/ldb/password_hash.so
+/usr/lib/x86_64-linux-gnu/samba/libcmdline-credentials.so.0
+/usr/share/man/man1/systemd-ask-password.1.gz
+/usr/share/man/man1/systemd-tty-ask-password-agent.1.gz
+/usr/share/man/man7/credentials.7.gz
+/usr/share/man/man8/systemd-ask-password-console.path.8.gz
+/usr/share/man/man8/systemd-ask-password-console.service.8.gz
+/usr/share/man/man8/systemd-ask-password-wall.path.8.gz
+/usr/share/man/man8/systemd-ask-password-wall.service.8.gz
+  #)There are more creds/passwds files in the previous parent folder
+
+/usr/share/pam/common-password.md5sums
+/usr/share/ubuntu-advantage-tools/modules/credentials.sh
+/var/cache/debconf/passwords.dat
+/var/lib/pam/password
+
+╔══════════╣ Checking for TTY (sudo/su) passwords in audit logs
+
+╔══════════╣ Searching passwords inside logs (limit 70)
+ Argon2 is a password-hashing function that can be used to hash passwords
+2018-10-05 20:38:55 configure base-passwd:amd64 3.5.44 3.5.44
+2018-10-05 20:38:55 install base-passwd:amd64 <none> 3.5.44
+2018-10-05 20:38:55 status half-configured base-passwd:amd64 3.5.44
+2018-10-05 20:38:55 status half-installed base-passwd:amd64 3.5.44
+2018-10-05 20:38:55 status installed base-passwd:amd64 3.5.44
+2018-10-05 20:38:55 status unpacked base-passwd:amd64 3.5.44
+2018-10-05 20:38:59 status half-configured base-passwd:amd64 3.5.44
+2018-10-05 20:38:59 status half-installed base-passwd:amd64 3.5.44
+2018-10-05 20:38:59 status unpacked base-passwd:amd64 3.5.44
+2018-10-05 20:38:59 upgrade base-passwd:amd64 3.5.44 3.5.44
+2018-10-05 20:39:03 install passwd:amd64 <none> 1:4.5-1ubuntu1
+2018-10-05 20:39:03 status half-installed passwd:amd64 1:4.5-1ubuntu1
+2018-10-05 20:39:04 status unpacked passwd:amd64 1:4.5-1ubuntu1
+2018-10-05 20:39:05 configure base-passwd:amd64 3.5.44 <none>
+2018-10-05 20:39:05 status half-configured base-passwd:amd64 3.5.44
+2018-10-05 20:39:05 status installed base-passwd:amd64 3.5.44
+2018-10-05 20:39:05 status unpacked base-passwd:amd64 3.5.44
+2018-10-05 20:39:07 configure passwd:amd64 1:4.5-1ubuntu1 <none>
+2018-10-05 20:39:07 status half-configured passwd:amd64 1:4.5-1ubuntu1
+2018-10-05 20:39:07 status installed passwd:amd64 1:4.5-1ubuntu1
+2018-10-05 20:39:07 status unpacked passwd:amd64 1:4.5-1ubuntu1
+Description: Set up users and passwords

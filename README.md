@@ -21,6 +21,7 @@ Writeups for HTB challenges/machines
 - [x] [ready](ready/notes.md)
 - [x] [tartarsauce](tartarsauce/notes.md)
 - [x] [haircut](haircut/notes.md)
+- [x] [friendzone](friendzone/notes.md)
 
 
 
