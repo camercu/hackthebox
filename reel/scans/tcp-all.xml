@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Mon Jul 10 19:56:49 2023 as: nmap -vvv -p 135,139,445,25,22,21,593,49159 -T4 -sV -sC -oA tcp-all 10.10.10.77 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 135,139,445,25,22,21,593,49159 -T4 -sV -sC -oA tcp-all 10.10.10.77" start="1689033409" startstr="Mon Jul 10 19:56:49 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="8" services="21-22,25,135,139,445,593,49159"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1689033409"/>
+<taskend task="NSE" time="1689033409"/>
+<taskbegin task="NSE" time="1689033409"/>
+<taskend task="NSE" time="1689033409"/>
+<taskbegin task="NSE" time="1689033409"/>
+<taskend task="NSE" time="1689033409"/>
+<taskbegin task="Ping Scan" time="1689033409"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.77" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1689033409" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1689033409"/>
+<taskend task="SYN Stealth Scan" time="1689033410" extrainfo="8 total ports"/>
+<taskbegin task="Service scan" time="1689033410"/>
+<taskend task="Service scan" time="1689033576" extrainfo="8 services on 1 host"/>
+<taskbegin task="NSE" time="1689033576"/>
+<taskprogress task="NSE" time="1689033607" percent="99.91" remaining="1" etc="1689033607"/>
+<taskend task="NSE" time="1689033616"/>
+<taskbegin task="NSE" time="1689033616"/>
+<taskend task="NSE" time="1689033619"/>
+<taskbegin task="NSE" time="1689033619"/>
+<taskend task="NSE" time="1689033619"/>
+<host starttime="1689033409" endtime="1689033619"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.77" addrtype="ipv4"/>
+<hostnames>
+<hostname name="reel" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;05-29-18  12:19AM       &lt;DIR&gt;          documents"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ssh" product="OpenSSH" version="7.6" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 82:20:c3:bd:16:cb:a2:9c:88:87:1d:6c:15:59:ed:ed (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQkehAZGj87mZluxFiVu+GPAAnC/OQ9QKUF2wlIwvefrD2L4zWyGXlAgSbUq/MqujR/efrTIjPYWK+5Mlxc7gEoZBylGAPbdxFivL8YQs3dQPt6aHNF0v+ABS01L2qZ4ewd1sTi1TlT6LtWHehX2PBJ6S3LWG09v+E/3ue97y9gaOjfA6BCMWgQ7K3yvQeHrRpBSk/vQxfCh4TINwV3EGbGTfbs8VvvR+Et7weB5EOifgXfHbyh04KemONkceFSAnjRRYOgwvtXai9imsDJ8KtS2RMR197VK4MBhsY7+h0nOvUMgm76RcRc6N8GW1mn6gWp98Ds9VeymzAmQvprs97&#xa;  256 23:2b:b8:0a:8c:1c:f4:4d:8d:7e:5e:64:58:80:33:45 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAw2CYanDlTRpGqzVXrfGTcAYVe/vUnnkWicQPzdfix5gFsv4nOGNUM+Fko7QAW0jqCFQKc8anGAwJjFGLTB00k=&#xa;  256 ac:8b:de:25:1d:b7:d8:38:38:9b:9c:16:bf:f6:3f:ed (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICdDfn+n5xueGtHP20/aPkI8pvCfxb2UZA3RQdqnpjBk"><table>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDQkehAZGj87mZluxFiVu+GPAAnC/OQ9QKUF2wlIwvefrD2L4zWyGXlAgSbUq/MqujR/efrTIjPYWK+5Mlxc7gEoZBylGAPbdxFivL8YQs3dQPt6aHNF0v+ABS01L2qZ4ewd1sTi1TlT6LtWHehX2PBJ6S3LWG09v+E/3ue97y9gaOjfA6BCMWgQ7K3yvQeHrRpBSk/vQxfCh4TINwV3EGbGTfbs8VvvR+Et7weB5EOifgXfHbyh04KemONkceFSAnjRRYOgwvtXai9imsDJ8KtS2RMR197VK4MBhsY7+h0nOvUMgm76RcRc6N8GW1mn6gWp98Ds9VeymzAmQvprs97</elem>
+<elem key="fingerprint">8220c3bd16cba29c88871d6c1559eded</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAw2CYanDlTRpGqzVXrfGTcAYVe/vUnnkWicQPzdfix5gFsv4nOGNUM+Fko7QAW0jqCFQKc8anGAwJjFGLTB00k=</elem>
+<elem key="fingerprint">232bb80a8c1cf44d8d7e5e6458803345</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAICdDfn+n5xueGtHP20/aPkI8pvCfxb2UZA3RQdqnpjBk</elem>
+<elem key="fingerprint">ac8bde251db7d838389b9c16bff63fed</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="smtp" servicefp="SF-Port25-TCP:V=7.94%I=7%D=7/10%Time=64AC9AC8%P=x86_64-pc-linux-gnu%r(NULL,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(Hello,3A,&quot;220\x20Mail\x20Service\x20ready\r\n501\x20EHLO\x20Invalid\x20domain\x20address\.\r\n&quot;)%r(Help,54,&quot;220\x20Mail\x20Service\x20ready\r\n211\x20DATA\x20HELO\x20EHLO\x20MAIL\x20NOOP\x20QUIT\x20RCPT\x20RSET\x20SAML\x20TURN\x20VRFY\r\n&quot;)%r(GenericLines,54,&quot;220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n&quot;)%r(GetRequest,54,&quot;220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n&quot;)%r(HTTPOptions,54,&quot;220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n&quot;)%r(RTSPRequest,54,&quot;220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n&quot;)%r(RPCCheck,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(DNSVersionBindReqTCP,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(DNSStatusRequestTCP,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(SSLSessionReq,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(TerminalServerCookie,36,&quot;220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n&quot;)%r(TLSSessionReq,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(Kerberos,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(SMBProgNeg,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(X11Probe,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(FourOhFourRequest,54,&quot;220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n&quot;)%r(LPDString,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(LDAPSearchReq,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(LDAPBindReq,18,&quot;220\x20Mail\x20Service\x20ready\r\n&quot;)%r(SIPOptions,162,&quot;220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n&quot;);" method="table" conf="3"/><script id="smtp-commands" output="REEL, SIZE 20480000, AUTH LOGIN PLAIN, HELP&#xa; 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, LDAPBindReq, LDAPSearchReq, LPDString, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: &#xa;    220 Mail Service ready&#xa;  FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, RTSPRequest: &#xa;    220 Mail Service ready&#xa;    sequence of commands&#xa;    sequence of commands&#xa;  Hello: &#xa;    220 Mail Service ready&#xa;    EHLO Invalid domain address.&#xa;  Help: &#xa;    220 Mail Service ready&#xa;    DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY&#xa;  SIPOptions: &#xa;    220 Mail Service ready&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;  TerminalServerCookie: &#xa;    220 Mail Service ready&#xa;    sequence of commands"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, LDAPBindReq, LDAPSearchReq, LPDString, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe">&#xa;    220 Mail Service ready</elem>
+<elem key="FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, RTSPRequest">&#xa;    220 Mail Service ready&#xa;    sequence of commands&#xa;    sequence of commands</elem>
+<elem key="Hello">&#xa;    220 Mail Service ready&#xa;    EHLO Invalid domain address.</elem>
+<elem key="Help">&#xa;    220 Mail Service ready&#xa;    DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY</elem>
+<elem key="SIPOptions">&#xa;    220 Mail Service ready&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands&#xa;    sequence of commands</elem>
+<elem key="TerminalServerCookie">&#xa;    220 Mail Service ready&#xa;    sequence of commands</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="Xai9imsDJ8KtS2RMR197VK4MBhsY7+h0nOvUMgm76RcRc6N8GW1mn6gWp98Ds9VeymzAmQvprs97" product="Windows Server 2012 R2 Standard 9600 microsoft-ds" extrainfo="workgroup: HTB" hostname="REEL" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49159"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 24595/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 44437/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 32588/udp): CLEAN (Timeout)&#xa;  Check 4 (port 39853/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="&#xa;  3:0:2: &#xa;    Message signing enabled and required"><table key="3:0:2">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="clock-skew" output="mean: -19m59s, deviation: 34m37s, median: -1s"><elem key="mean">-1199</elem>
+<elem key="count">3</elem>
+<elem key="stddev">2077</elem>
+<elem key="median">-1</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: required"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">required</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2023-07-10T23:59:40&#xa;  start_date: 2023-07-10T23:42:10"><elem key="date">2023-07-10T23:59:40</elem>
+<elem key="start_date">2023-07-10T23:42:10</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2012 R2 Standard 9600 (Windows Server 2012 R2 Standard 6.3)&#xa;  OS CPE: cpe:/o:microsoft:windows_server_2012::-&#xa;  Computer name: REEL&#xa;  NetBIOS computer name: REEL\x00&#xa;  Domain name: HTB.LOCAL&#xa;  Forest name: HTB.LOCAL&#xa;  FQDN: REEL.HTB.LOCAL&#xa;  System time: 2023-07-11T00:59:38+01:00&#xa;"><elem key="os">Windows Server 2012 R2 Standard 9600</elem>
+<elem key="lanmanager">Windows Server 2012 R2 Standard 6.3</elem>
+<elem key="server">REEL\x00</elem>
+<elem key="date">2023-07-11T00:59:38+01:00</elem>
+<elem key="fqdn">REEL.HTB.LOCAL</elem>
+<elem key="domain_dns">HTB.LOCAL</elem>
+<elem key="forest_dns">HTB.LOCAL</elem>
+<elem key="workgroup">HTB\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_server_2012::-</elem>
+</script></hostscript><times srtt="342359" rttvar="217627" to="1212867"/>
+</host>
+<taskbegin task="NSE" time="1689033619"/>
+<taskend task="NSE" time="1689033619"/>
+<taskbegin task="NSE" time="1689033619"/>
+<taskend task="NSE" time="1689033619"/>
+<taskbegin task="NSE" time="1689033619"/>
+<taskend task="NSE" time="1689033619"/>
+<runstats><finished time="1689033619" timestr="Mon Jul 10 20:00:19 2023" summary="Nmap done at Mon Jul 10 20:00:19 2023; 1 IP address (1 host up) scanned in 210.14 seconds" elapsed="210.14" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

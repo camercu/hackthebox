@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sun Jul  9 09:20:43 2023 as: nmap -vvv -p 53,88,135,139,389,445,464,593,636,3268,3269,5985,9389,47001,49664,49665,49666,49667,49671,49678,49679,49684,49716,49798 -T4 -sV -sC -oA tcp-all 10.10.10.169 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 53,88,135,139,389,445,464,593,636,3268,3269,5985,9389,47001,49664,49665,49666,49667,49671,49678,49679,49684,49716,49798 -T4 -sV -sC -oA tcp-all 10.10.10.169" start="1688908843" startstr="Sun Jul  9 09:20:43 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="24" services="53,88,135,139,389,445,464,593,636,3268-3269,5985,9389,47001,49664-49667,49671,49678-49679,49684,49716,49798"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1688908843"/>
+<taskend task="NSE" time="1688908843"/>
+<taskbegin task="NSE" time="1688908843"/>
+<taskend task="NSE" time="1688908843"/>
+<taskbegin task="NSE" time="1688908843"/>
+<taskend task="NSE" time="1688908843"/>
+<taskbegin task="Ping Scan" time="1688908843"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.169" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1688908843" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1688908843"/>
+<taskend task="SYN Stealth Scan" time="1688908844" extrainfo="24 total ports"/>
+<taskbegin task="Service scan" time="1688908844"/>
+<taskend task="Service scan" time="1688908901" extrainfo="24 services on 1 host"/>
+<taskbegin task="NSE" time="1688908901"/>
+<taskend task="NSE" time="1688908912"/>
+<taskbegin task="NSE" time="1688908912"/>
+<taskend task="NSE" time="1688908914"/>
+<taskbegin task="NSE" time="1688908914"/>
+<taskend task="NSE" time="1688908914"/>
+<host starttime="1688908843" endtime="1688908914"><status state="up" reason="reset" reason_ttl="127"/>
+<address addr="10.10.10.169" addrtype="ipv4"/>
+<hostnames>
+<hostname name="resolute" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2023-07-09 13:27:50Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: megabank.local, Site: Default-First-Site-Name" hostname="RESOLUTE" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="&#x10;s&#x97;&#xbc;&#x9e;U" product="Windows Server 2016 Standard 14393 microsoft-ds" extrainfo="workgroup: MEGABANK" hostname="RESOLUTE" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: megabank.local, Site: Default-First-Site-Name" hostname="RESOLUTE" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49671"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49678"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49679"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49684"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49716"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49798"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: 2h27m01s, deviation: 4h02m32s, median: 6m59s"><elem key="median">419</elem>
+<elem key="stddev">14552</elem>
+<elem key="mean">8821</elem>
+<elem key="count">3</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: required"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">required</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)&#xa;  Computer name: Resolute&#xa;  NetBIOS computer name: RESOLUTE\x00&#xa;  Domain name: megabank.local&#xa;  Forest name: megabank.local&#xa;  FQDN: Resolute.megabank.local&#xa;  System time: 2023-07-09T06:28:46-07:00&#xa;"><elem key="os">Windows Server 2016 Standard 14393</elem>
+<elem key="lanmanager">Windows Server 2016 Standard 6.3</elem>
+<elem key="server">RESOLUTE\x00</elem>
+<elem key="date">2023-07-09T06:28:46-07:00</elem>
+<elem key="fqdn">Resolute.megabank.local</elem>
+<elem key="domain_dns">megabank.local</elem>
+<elem key="forest_dns">megabank.local</elem>
+<elem key="workgroup">MEGABANK\x00</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2023-07-09T13:28:43&#xa;  start_date: 2023-07-09T13:24:30"><elem key="date">2023-07-09T13:28:43</elem>
+<elem key="start_date">2023-07-09T13:24:30</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3:1:1: &#xa;    Message signing enabled and required"><table key="3:1:1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 52471/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 62802/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 55070/udp): CLEAN (Timeout)&#xa;  Check 4 (port 16680/udp): CLEAN (Failed to receive data)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/></hostscript><times srtt="68382" rttvar="2333" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1688908914"/>
+<taskend task="NSE" time="1688908914"/>
+<taskbegin task="NSE" time="1688908914"/>
+<taskend task="NSE" time="1688908914"/>
+<taskbegin task="NSE" time="1688908914"/>
+<taskend task="NSE" time="1688908914"/>
+<runstats><finished time="1688908914" timestr="Sun Jul  9 09:21:54 2023" summary="Nmap done at Sun Jul  9 09:21:54 2023; 1 IP address (1 host up) scanned in 71.19 seconds" elapsed="71.19" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

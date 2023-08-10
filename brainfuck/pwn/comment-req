@@ -1,0 +1,20 @@
+POST /wp-comments-post.php HTTP/1.1
+Host: brainfuck.htb
+Cookie: comment_author_4a881878556bfa5bb532816568f34de7=derp-name; comment_author_email_4a881878556bfa5bb532816568f34de7=derp%40derp.com; comment_author_url_4a881878556bfa5bb532816568f34de7=http%3A%2F%2Fderp.com
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://brainfuck.htb/?p=1%27
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 140
+Origin: https://brainfuck.htb
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Te: trailers
+Connection: close
+
+comment=derp-comment&author=derp-name&email=derp%40derp.com&url=http%3A%2F%2Fderp.com&submit=Post+Comment&comment_post_ID=1&comment_parent=0

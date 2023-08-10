@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sun Jul  9 18:06:57 2023 as: nmap -vvv -p 53,88,135,139,389,445,636,3268,3269,5985,49158,49170 -T4 -sV -sC -oA tcp-all 10.10.10.182 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 53,88,135,139,389,445,636,3268,3269,5985,49158,49170 -T4 -sV -sC -oA tcp-all 10.10.10.182" start="1688940417" startstr="Sun Jul  9 18:06:57 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="12" services="53,88,135,139,389,445,636,3268-3269,5985,49158,49170"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1688940418"/>
+<taskend task="NSE" time="1688940418"/>
+<taskbegin task="NSE" time="1688940418"/>
+<taskend task="NSE" time="1688940418"/>
+<taskbegin task="NSE" time="1688940418"/>
+<taskend task="NSE" time="1688940418"/>
+<taskbegin task="Ping Scan" time="1688940418"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.182" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1688940418" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1688940418"/>
+<taskend task="SYN Stealth Scan" time="1688940418" extrainfo="12 total ports"/>
+<taskbegin task="Service scan" time="1688940418"/>
+<taskend task="Service scan" time="1688940473" extrainfo="12 services on 1 host"/>
+<taskbegin task="NSE" time="1688940473"/>
+<taskprogress task="NSE" time="1688940504" percent="99.94" remaining="1" etc="1688940504"/>
+<taskend task="NSE" time="1688940513"/>
+<taskbegin task="NSE" time="1688940513"/>
+<taskend task="NSE" time="1688940515"/>
+<taskbegin task="NSE" time="1688940515"/>
+<taskend task="NSE" time="1688940515"/>
+<host starttime="1688940418" endtime="1688940515"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.182" addrtype="ipv4"/>
+<hostnames>
+<hostname name="cascade" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" product="Microsoft DNS" version="6.1.7601 (1DB15D39)" extrainfo="Windows Server 2008 R2 SP1" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:dns</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: Microsoft DNS 6.1.7601 (1DB15D39)"><elem key="bind.version">Microsoft DNS 6.1.7601 (1DB15D39)</elem>
+</script></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2023-07-09 22:07:04Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: cascade.local, Site: Default-First-Site-Name" hostname="CASC-DC1" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: cascade.local, Site: Default-First-Site-Name" hostname="CASC-DC1" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49158"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49170"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 51409/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 30512/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 10882/udp): CLEAN (Timeout)&#xa;  Check 4 (port 18318/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="&#xa;  2:1:0: &#xa;    Message signing enabled and required"><table key="2:1:0">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="clock-skew" output="0s"><elem key="mean">0</elem>
+<elem key="median">0</elem>
+<elem key="stddev">0</elem>
+<elem key="count">1</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2023-07-09T22:07:54&#xa;  start_date: 2023-07-09T22:02:07"><elem key="date">2023-07-09T22:07:54</elem>
+<elem key="start_date">2023-07-09T22:02:07</elem>
+</script></hostscript><times srtt="62814" rttvar="5195" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1688940515"/>
+<taskend task="NSE" time="1688940515"/>
+<taskbegin task="NSE" time="1688940515"/>
+<taskend task="NSE" time="1688940515"/>
+<taskbegin task="NSE" time="1688940515"/>
+<taskend task="NSE" time="1688940515"/>
+<runstats><finished time="1688940515" timestr="Sun Jul  9 18:08:35 2023" summary="Nmap done at Sun Jul  9 18:08:35 2023; 1 IP address (1 host up) scanned in 98.36 seconds" elapsed="98.36" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

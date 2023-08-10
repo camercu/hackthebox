@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Mon Apr 18 21:26:45 2022 as: nmap -vvv -p 22,25,110,143,443 -n -Pn -sV -sC -oA tcp-all 10.10.10.17
+# Ports scanned: TCP(5;22,25,110,143,443) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.17 ()	Status: Up
+Host: 10.10.10.17 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)/, 25/open/tcp//smtp//Postfix smtpd/, 110/open/tcp//pop3//Dovecot pop3d/, 143/open/tcp//imap//Dovecot imapd/, 443/open/tcp//ssl|http//nginx 1.10.0 (Ubuntu)/
+# Nmap done at Mon Apr 18 21:27:37 2022 -- 1 IP address (1 host up) scanned in 51.41 seconds

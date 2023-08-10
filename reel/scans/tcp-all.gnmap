@@ -1,0 +1,5 @@
+# Nmap 7.94 scan initiated Mon Jul 10 19:56:49 2023 as: nmap -vvv -p 135,139,445,25,22,21,593,49159 -T4 -sV -sC -oA tcp-all 10.10.10.77
+# Ports scanned: TCP(8;21-22,25,135,139,445,593,49159) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.77 (reel)	Status: Up
+Host: 10.10.10.77 (reel)	Ports: 21/open/tcp//ftp//Microsoft ftpd/, 22/open/tcp//ssh//OpenSSH 7.6 (protocol 2.0)/, 25/open/tcp//smtp?///, 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp////Windows Server 2012 R2 Standard 9600 microsoft-ds (workgroup: HTB)/, 593/open/tcp//ncacn_http//Microsoft Windows RPC over HTTP 1.0/, 49159/open/tcp//msrpc//Microsoft Windows RPC/
+# Nmap done at Mon Jul 10 20:00:19 2023 -- 1 IP address (1 host up) scanned in 210.14 seconds

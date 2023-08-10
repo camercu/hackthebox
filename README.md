@@ -1,6 +1,6 @@
 # HackTheBox
 
-Writeups for HTB challenges/machines
+Write ups for HTB challenges/machines
 
 
 
@@ -9,9 +9,17 @@ Writeups for HTB challenges/machines
 ### Windows Boxes
 
 - [x] [legacy](legacy/notes.md)
-
 - [x] [secnotes](secnotes/notes.md)
 
+
+### Active Directory Boxes
+
+- [x] [forest](forest/forest.md)
+- [x] [sauna](sauna/sauna.md)
+- [x] [active](active/active.md)
+- [x] [resolute](resolute/resolute.md)
+- [x] [cascade](cascade/cascade.md)
+- [ ] [reel](reel/reel.md)
 
 
 ### Linux Boxes
@@ -22,6 +30,7 @@ Writeups for HTB challenges/machines
 - [x] [tartarsauce](tartarsauce/notes.md)
 - [x] [haircut](haircut/notes.md)
 - [x] [friendzone](friendzone/notes.md)
-
+- [ ] [brainfuck](brainfuck/notes.md)
+- [ ] [lame](lame/notes.md)
 
 

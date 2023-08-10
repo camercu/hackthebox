@@ -1,0 +1,4 @@
+http://sauna/images              [33m (Status: 403)[0m [Size: 1233]
+http://sauna/fonts               [33m (Status: 403)[0m [Size: 1233]
+http://sauna/css                 [33m (Status: 403)[0m [Size: 1233]
+http://sauna/index.html          [32m (Status: 200)[0m [Size: 32797]

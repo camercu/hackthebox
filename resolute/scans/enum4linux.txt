@@ -1,0 +1,1614 @@
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Jul  9 09:28:57 2023
+
+[34m =========================================( [0m[32mTarget Information[0m[34m )=========================================
+
+[0mTarget ........... resolute
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+[34m ==============================( [0m[32mEnumerating Workgroup/Domain on resolute[0m[34m )==============================
+
+[0m[33m
+[E] [0m[31mCan't find workgroup/domain
+
+[0m
+
+[34m ==================================( [0m[32mNbtstat Information for resolute[0m[34m )==================================
+
+[0mLooking up status of 10.10.10.169
+No reply from 10.10.10.169
+
+[34m =====================================( [0m[32mSession Check on resolute[0m[34m )=====================================
+
+[0m[33m
+[+] [0m[32mServer resolute allows sessions using username '', password ''
+
+[0m
+[34m =============================( [0m[32mGetting information via LDAP for resolute[0m[34m )=============================
+
+[0m[33m
+[+] [0m[32mresolute appears to be a child DC
+
+[0m
+[34m ==================================( [0m[32mGetting domain SID for resolute[0m[34m )==================================
+
+[0mDomain Name: MEGABANK
+Domain Sid: S-1-5-21-1392959593-3013219662-3596683436
+[33m
+[+] [0m[32mHost is part of a domain (not a workgroup)
+
+[0m
+[34m =====================================( [0m[32mOS information on resolute[0m[34m )=====================================
+
+[0m[33m
+[E] [0m[31mCan't get OS info with smbclient
+
+[0m[33m
+[+] [0m[32mGot OS info for resolute from srvinfo: 
+[0mdo_cmd: Could not initialise srvsvc. Error was NT_STATUS_ACCESS_DENIED
+
+
+[34m =========================================( [0m[32mUsers on resolute[0m[34m )=========================================
+
+[0mindex: 0x10b0 RID: 0x19ca acb: 0x00000010 Account: abigail	Name: (null)	Desc: (null)
+index: 0xfbc RID: 0x1f4 acb: 0x00000210 Account: Administrator	Name: (null)	Desc: Built-in account for administering the computer/domain
+index: 0x10b4 RID: 0x19ce acb: 0x00000010 Account: angela	Name: (null)	Desc: (null)
+index: 0x10bc RID: 0x19d6 acb: 0x00000010 Account: annette	Name: (null)	Desc: (null)
+index: 0x10bd RID: 0x19d7 acb: 0x00000010 Account: annika	Name: (null)	Desc: (null)
+index: 0x10b9 RID: 0x19d3 acb: 0x00000010 Account: claire	Name: (null)	Desc: (null)
+index: 0x10bf RID: 0x19d9 acb: 0x00000010 Account: claude	Name: (null)	Desc: (null)
+index: 0xfbe RID: 0x1f7 acb: 0x00000215 Account: DefaultAccount	Name: (null)	Desc: A user account managed by the system.
+index: 0x10b5 RID: 0x19cf acb: 0x00000010 Account: felicia	Name: (null)	Desc: (null)
+index: 0x10b3 RID: 0x19cd acb: 0x00000010 Account: fred	Name: (null)	Desc: (null)
+index: 0xfbd RID: 0x1f5 acb: 0x00000215 Account: Guest	Name: (null)	Desc: Built-in account for guest access to the computer/domain
+index: 0x10b6 RID: 0x19d0 acb: 0x00000010 Account: gustavo	Name: (null)	Desc: (null)
+index: 0xff4 RID: 0x1f6 acb: 0x00000011 Account: krbtgt	Name: (null)	Desc: Key Distribution Center Service Account
+index: 0x10b1 RID: 0x19cb acb: 0x00000010 Account: marcus	Name: (null)	Desc: (null)
+index: 0x10a9 RID: 0x457 acb: 0x00000210 Account: marko	Name: Marko Novak	Desc: Account created. Password set to Welcome123!
+index: 0x10c0 RID: 0x2775 acb: 0x00000010 Account: melanie	Name: (null)	Desc: (null)
+index: 0x10c3 RID: 0x2778 acb: 0x00000010 Account: naoki	Name: (null)	Desc: (null)
+index: 0x10ba RID: 0x19d4 acb: 0x00000010 Account: paulo	Name: (null)	Desc: (null)
+index: 0x10be RID: 0x19d8 acb: 0x00000010 Account: per	Name: (null)	Desc: (null)
+index: 0x10a3 RID: 0x451 acb: 0x00000210 Account: ryan	Name: Ryan Bertrand	Desc: (null)
+index: 0x10b2 RID: 0x19cc acb: 0x00000010 Account: sally	Name: (null)	Desc: (null)
+index: 0x10c2 RID: 0x2777 acb: 0x00000010 Account: simon	Name: (null)	Desc: (null)
+index: 0x10bb RID: 0x19d5 acb: 0x00000010 Account: steve	Name: (null)	Desc: (null)
+index: 0x10b8 RID: 0x19d2 acb: 0x00000010 Account: stevie	Name: (null)	Desc: (null)
+index: 0x10af RID: 0x19c9 acb: 0x00000010 Account: sunita	Name: (null)	Desc: (null)
+index: 0x10b7 RID: 0x19d1 acb: 0x00000010 Account: ulf	Name: (null)	Desc: (null)
+index: 0x10c1 RID: 0x2776 acb: 0x00000010 Account: zach	Name: (null)	Desc: (null)
+
+user:[Administrator] rid:[0x1f4]
+user:[Guest] rid:[0x1f5]
+user:[krbtgt] rid:[0x1f6]
+user:[DefaultAccount] rid:[0x1f7]
+user:[ryan] rid:[0x451]
+user:[marko] rid:[0x457]
+user:[sunita] rid:[0x19c9]
+user:[abigail] rid:[0x19ca]
+user:[marcus] rid:[0x19cb]
+user:[sally] rid:[0x19cc]
+user:[fred] rid:[0x19cd]
+user:[angela] rid:[0x19ce]
+user:[felicia] rid:[0x19cf]
+user:[gustavo] rid:[0x19d0]
+user:[ulf] rid:[0x19d1]
+user:[stevie] rid:[0x19d2]
+user:[claire] rid:[0x19d3]
+user:[paulo] rid:[0x19d4]
+user:[steve] rid:[0x19d5]
+user:[annette] rid:[0x19d6]
+user:[annika] rid:[0x19d7]
+user:[per] rid:[0x19d8]
+user:[claude] rid:[0x19d9]
+user:[melanie] rid:[0x2775]
+user:[zach] rid:[0x2776]
+user:[simon] rid:[0x2777]
+user:[naoki] rid:[0x2778]
+	User Name   :	Guest
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	Built-in account for guest access to the computer/domain
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Wed, 31 Dec 1969 19:00:00 EST
+	Password can change Time :	Wed, 31 Dec 1969 19:00:00 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x1f5
+	group_rid:	0x202
+	acb_info :	0x00000215
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	claude
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:39:56 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:39:56 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d9
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	simon
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Wed, 04 Dec 2019 05:39:59 EST
+	Password can change Time :	Thu, 05 Dec 2019 05:39:59 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x2777
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	abigail
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:27:31 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:27:31 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19ca
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	sunita
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:26:29 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:26:29 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19c9
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	steve
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:35:25 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:35:25 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d5
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	melanie
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 31 Dec 1969 19:00:00 EST
+	Password last set Time   :	Sun, 09 Jul 2023 09:36:06 EDT
+	Password can change Time :	Mon, 10 Jul 2023 09:36:06 EDT
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x2775
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	annika
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:37:24 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:37:24 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d7
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	krbtgt
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	Key Distribution Center Service Account
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Wed, 25 Sep 2019 09:29:12 EDT
+	Password can change Time :	Thu, 26 Sep 2019 09:29:12 EDT
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x1f6
+	group_rid:	0x201
+	acb_info :	0x00000011
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	zach
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Wed, 04 Dec 2019 05:39:28 EST
+	Password can change Time :	Thu, 05 Dec 2019 05:39:28 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x2776
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	annette
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:36:56 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:36:56 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d6
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	gustavo
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:31:42 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:31:42 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d0
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	per
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:38:12 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:38:12 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d8
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	marko
+	Full Name   :	Marko Novak
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	Account created. Password set to Welcome123!
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Fri, 27 Sep 2019 09:17:15 EDT
+	Password can change Time :	Sat, 28 Sep 2019 09:17:15 EDT
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x457
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	angela
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:29:43 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:29:43 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19ce
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	ryan
+	Full Name   :	Ryan Bertrand
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 31 Dec 1969 19:00:00 EST
+	Password last set Time   :	Sun, 09 Jul 2023 09:36:05 EDT
+	Password can change Time :	Mon, 10 Jul 2023 09:36:05 EDT
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x451
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	stevie
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:33:13 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:33:13 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d2
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	naoki
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Wed, 04 Dec 2019 05:40:44 EST
+	Password can change Time :	Thu, 05 Dec 2019 05:40:44 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x2778
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	ulf
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:32:20 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:32:20 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d1
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	sally
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:28:30 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:28:30 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19cc
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	claire
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:33:45 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:33:45 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d3
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	marcus
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:27:59 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:27:59 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19cb
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	fred
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:29:02 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:29:02 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19cd
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	DefaultAccount
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	A user account managed by the system.
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Wed, 31 Dec 1969 19:00:00 EST
+	Password can change Time :	Wed, 31 Dec 1969 19:00:00 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x1f7
+	group_rid:	0x201
+	acb_info :	0x00000215
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	paulo
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:34:47 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:34:47 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19d4
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	Administrator
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	Built-in account for administering the computer/domain
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Sun, 09 Jul 2023 09:25:23 EDT
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 31 Dec 1969 19:00:00 EST
+	Password last set Time   :	Sun, 09 Jul 2023 09:36:06 EDT
+	Password can change Time :	Mon, 10 Jul 2023 09:36:06 EDT
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x1f4
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000057
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+	User Name   :	felicia
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 19:00:00 EST
+	Logoff Time              :	Wed, 31 Dec 1969 19:00:00 EST
+	Kickoff Time             :	Wed, 13 Sep 30828 22:48:05 EDT
+	Password last set Time   :	Tue, 03 Dec 2019 16:30:54 EST
+	Password can change Time :	Wed, 04 Dec 2019 16:30:54 EST
+	Password must change Time:	Wed, 13 Sep 30828 22:48:05 EDT
+	unknown_2[0..31]...
+	user_rid :	0x19cf
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+
+[34m ==================================( [0m[32mMachine Enumeration on resolute[0m[34m )==================================
+
+[0m[33m
+[E] [0m[31mNot implemented in this version of enum4linux.
+
+[0m
+[34m ===================================( [0m[32mShare Enumeration on resolute[0m[34m )===================================
+
+[0m
+	Sharename       Type      Comment
+	---------       ----      -------
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+[33m
+[+] [0m[32mAttempting to map shares on resolute
+
+[0m
+[34m ==============================( [0m[32mPassword Policy Information for resolute[0m[34m )==============================
+
+[0m
+
+[+] Attaching to resolute using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+[+] Found domain(s):
+
+	[+] MEGABANK
+	[+] Builtin
+
+[+] Password Info for Domain: MEGABANK
+
+	[+] Minimum password length: 7
+	[+] Password history length: 24
+	[+] Maximum password age: Not Set
+	[+] Password Complexity Flags: 000000
+
+		[+] Domain Refuse Password Change: 0
+		[+] Domain Password Store Cleartext: 0
+		[+] Domain Password Lockout Admins: 0
+		[+] Domain Password No Clear Change: 0
+		[+] Domain Password No Anon Change: 0
+		[+] Domain Password Complex: 0
+
+	[+] Minimum password age: 1 day 4 minutes 
+	[+] Reset Account Lockout Counter: 30 minutes 
+	[+] Locked Account Duration: 30 minutes 
+	[+] Account Lockout Threshold: None
+	[+] Forced Log off Time: Not Set
+
+
+[33m
+[+] [0m[32mRetieved partial password policy with rpcclient:
+
+
+[0mPassword Complexity: Disabled
+Minimum Password Length: 7
+
+
+[34m =========================================( [0m[32mGroups on resolute[0m[34m )=========================================
+
+[0m[33m
+[+] [0m[32mGetting builtin groups:
+
+[0mgroup:[Account Operators] rid:[0x224]
+group:[Pre-Windows 2000 Compatible Access] rid:[0x22a]
+group:[Incoming Forest Trust Builders] rid:[0x22d]
+group:[Windows Authorization Access Group] rid:[0x230]
+group:[Terminal Server License Servers] rid:[0x231]
+group:[Administrators] rid:[0x220]
+group:[Users] rid:[0x221]
+group:[Guests] rid:[0x222]
+group:[Print Operators] rid:[0x226]
+group:[Backup Operators] rid:[0x227]
+group:[Replicator] rid:[0x228]
+group:[Remote Desktop Users] rid:[0x22b]
+group:[Network Configuration Operators] rid:[0x22c]
+group:[Performance Monitor Users] rid:[0x22e]
+group:[Performance Log Users] rid:[0x22f]
+group:[Distributed COM Users] rid:[0x232]
+group:[IIS_IUSRS] rid:[0x238]
+group:[Cryptographic Operators] rid:[0x239]
+group:[Event Log Readers] rid:[0x23d]
+group:[Certificate Service DCOM Access] rid:[0x23e]
+group:[RDS Remote Access Servers] rid:[0x23f]
+group:[RDS Endpoint Servers] rid:[0x240]
+group:[RDS Management Servers] rid:[0x241]
+group:[Hyper-V Administrators] rid:[0x242]
+group:[Access Control Assistance Operators] rid:[0x243]
+group:[Remote Management Users] rid:[0x244]
+group:[System Managed Accounts Group] rid:[0x245]
+group:[Storage Replica Administrators] rid:[0x246]
+group:[Server Operators] rid:[0x225]
+[33m
+[+] [0m[32m Getting builtin group memberships:
+
+[0m[35mGroup: [0mRemote Management Users' (RID: 580) has member: Couldn't lookup SIDs
+[35mGroup: [0mGuests' (RID: 546) has member: Couldn't lookup SIDs
+[35mGroup: [0mUsers' (RID: 545) has member: Couldn't lookup SIDs
+[35mGroup: [0mIIS_IUSRS' (RID: 568) has member: Couldn't lookup SIDs
+[35mGroup: [0mAdministrators' (RID: 544) has member: Couldn't lookup SIDs
+[35mGroup: [0mSystem Managed Accounts Group' (RID: 581) has member: Couldn't lookup SIDs
+[35mGroup: [0mWindows Authorization Access Group' (RID: 560) has member: Couldn't lookup SIDs
+[35mGroup: [0mPre-Windows 2000 Compatible Access' (RID: 554) has member: Couldn't lookup SIDs
+[33m
+[+] [0m[32mGetting detailed info for group Event Log Readers (RID: 573)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Backup Operators (RID: 551)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Remote Management Users (RID: 580)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Hyper-V Administrators (RID: 578)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group RDS Endpoint Servers (RID: 576)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Guests (RID: 546)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group RDS Management Servers (RID: 577)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Users (RID: 545)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Performance Monitor Users (RID: 558)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Distributed COM Users (RID: 562)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Server Operators (RID: 549)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group IIS_IUSRS (RID: 568)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Administrators (RID: 544)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Terminal Server License Servers (RID: 561)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Print Operators (RID: 550)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Remote Desktop Users (RID: 555)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group RDS Remote Access Servers (RID: 575)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Account Operators (RID: 548)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Storage Replica Administrators (RID: 582)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group System Managed Accounts Group (RID: 581)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Windows Authorization Access Group (RID: 560)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Certificate Service DCOM Access (RID: 574)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Pre-Windows 2000 Compatible Access (RID: 554)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Performance Log Users (RID: 559)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Cryptographic Operators (RID: 569)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Replicator (RID: 552)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Network Configuration Operators (RID: 556)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Incoming Forest Trust Builders (RID: 557)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Access Control Assistance Operators (RID: 579)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32m Getting local groups:
+
+[0mgroup:[Cert Publishers] rid:[0x205]
+group:[RAS and IAS Servers] rid:[0x229]
+group:[Allowed RODC Password Replication Group] rid:[0x23b]
+group:[Denied RODC Password Replication Group] rid:[0x23c]
+group:[DnsAdmins] rid:[0x44d]
+[33m
+[+] [0m[32m Getting local group memberships:
+
+[0m[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: Couldn't lookup SIDs
+[35mGroup: [0mDnsAdmins' (RID: 1101) has member: Couldn't lookup SIDs
+[33m
+[+] [0m[32mGetting detailed info for group Denied RODC Password Replication Group (RID: 572)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group RAS and IAS Servers (RID: 553)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Allowed RODC Password Replication Group (RID: 571)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group DnsAdmins (RID: 1101)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32mGetting detailed info for group Cert Publishers (RID: 517)
+
+[0m[33m
+[E] [0m[31mNo info found
+
+
+[0m[33m
+[+] [0m[32m Getting domain groups:
+
+[0mgroup:[Enterprise Read-only Domain Controllers] rid:[0x1f2]
+group:[Domain Admins] rid:[0x200]
+group:[Domain Users] rid:[0x201]
+group:[Domain Guests] rid:[0x202]
+group:[Domain Computers] rid:[0x203]
+group:[Domain Controllers] rid:[0x204]
+group:[Schema Admins] rid:[0x206]
+group:[Enterprise Admins] rid:[0x207]
+group:[Group Policy Creator Owners] rid:[0x208]
+group:[Read-only Domain Controllers] rid:[0x209]
+group:[Cloneable Domain Controllers] rid:[0x20a]
+group:[Protected Users] rid:[0x20d]
+group:[Key Admins] rid:[0x20e]
+group:[Enterprise Key Admins] rid:[0x20f]
+group:[DnsUpdateProxy] rid:[0x44e]
+group:[Contractors] rid:[0x44f]
+[33m
+[+] [0m[32m Getting domain group memberships:
+
+[0m[35mGroup: [0m'Domain Computers' (RID: 515) has member: MEGABANK\MS02$
+[35mGroup: [0m'Domain Controllers' (RID: 516) has member: MEGABANK\RESOLUTE$
+[35mGroup: [0m'Schema Admins' (RID: 518) has member: MEGABANK\Administrator
+[35mGroup: [0m'Group Policy Creator Owners' (RID: 520) has member: MEGABANK\Administrator
+[35mGroup: [0m'Contractors' (RID: 1103) has member: MEGABANK\ryan
+[35mGroup: [0m'Enterprise Admins' (RID: 519) has member: MEGABANK\Administrator
+[35mGroup: [0m'Domain Admins' (RID: 512) has member: MEGABANK\Administrator
+[35mGroup: [0m'Domain Guests' (RID: 514) has member: MEGABANK\Guest
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\Administrator
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\DefaultAccount
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\krbtgt
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\ryan
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\marko
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\sunita
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\abigail
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\marcus
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\sally
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\fred
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\angela
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\felicia
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\gustavo
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\ulf
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\stevie
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\claire
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\paulo
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\steve
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\annette
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\annika
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\per
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\claude
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\melanie
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\zach
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\simon
+[35mGroup: [0m'Domain Users' (RID: 513) has member: MEGABANK\naoki
+[33m
+[+] [0m[32mGetting detailed info for group Enterprise Read-only Domain Controllers (RID: 498)
+
+[0m	Group Name:	Enterprise Read-only Domain Controllers
+	Description:	Members of this group are Read-Only Domain Controllers in the enterprise
+	Group Attribute:7
+	Num Members:0
+
+[33m
+[+] [0m[32mGetting detailed info for group Domain Computers (RID: 515)
+
+[0m	Group Name:	Domain Computers
+	Description:	All workstations and servers joined to the domain
+	Group Attribute:7
+	Num Members:1
+
+[33m
+[+] [0m[32mGetting detailed info for group Read-only Domain Controllers (RID: 521)
+
+[0m	Group Name:	Read-only Domain Controllers
+	Description:	Members of this group are Read-Only Domain Controllers in the domain
+	Group Attribute:7
+	Num Members:0
+
+[33m
+[+] [0m[32mGetting detailed info for group Protected Users (RID: 525)
+
+[0m	Group Name:	Protected Users
+	Description:	Members of this group are afforded additional protections against authentication security threats. See http://go.microsoft.com/fwlink/?LinkId=298939 for more information.
+	Group Attribute:7
+	Num Members:0
+
+[33m
+[+] [0m[32mGetting detailed info for group Enterprise Key Admins (RID: 527)
+
+[0m	Group Name:	Enterprise Key Admins
+	Description:	Members of this group can perform administrative actions on key objects within the forest.
+	Group Attribute:7
+	Num Members:0
+
+[33m
+[+] [0m[32mGetting detailed info for group Key Admins (RID: 526)
+
+[0m	Group Name:	Key Admins
+	Description:	Members of this group can perform administrative actions on key objects within the domain.
+	Group Attribute:7
+	Num Members:0
+
+[33m
+[+] [0m[32mGetting detailed info for group Domain Controllers (RID: 516)
+
+[0m	Group Name:	Domain Controllers
+	Description:	All domain controllers in the domain
+	Group Attribute:7
+	Num Members:1
+
+[33m
+[+] [0m[32mGetting detailed info for group Cloneable Domain Controllers (RID: 522)
+
+[0m	Group Name:	Cloneable Domain Controllers
+	Description:	Members of this group that are domain controllers may be cloned.
+	Group Attribute:7
+	Num Members:0
+
+[33m
+[+] [0m[32mGetting detailed info for group Schema Admins (RID: 518)
+
+[0m	Group Name:	Schema Admins
+	Description:	Designated administrators of the schema
+	Group Attribute:7
+	Num Members:1
+
+[33m
+[+] [0m[32mGetting detailed info for group DnsUpdateProxy (RID: 1102)
+
+[0m	Group Name:	DnsUpdateProxy
+	Description:	DNS clients who are permitted to perform dynamic updates on behalf of some other clients (such as DHCP servers).
+	Group Attribute:7
+	Num Members:0
+
+[33m
+[+] [0m[32mGetting detailed info for group Group Policy Creator Owners (RID: 520)
+
+[0m	Group Name:	Group Policy Creator Owners
+	Description:	Members in this group can modify group policy for the domain
+	Group Attribute:7
+	Num Members:1
+
+[33m
+[+] [0m[32mGetting detailed info for group Contractors (RID: 1103)
+
+[0m	Group Name:	Contractors
+	Description:	Contractors
+	Group Attribute:7
+	Num Members:1
+
+[33m
+[+] [0m[32mGetting detailed info for group Enterprise Admins (RID: 519)
+
+[0m	Group Name:	Enterprise Admins
+	Description:	Designated administrators of the enterprise
+	Group Attribute:7
+	Num Members:1
+
+[33m
+[+] [0m[32mGetting detailed info for group Domain Admins (RID: 512)
+
+[0m	Group Name:	Domain Admins
+	Description:	Designated administrators of the domain
+	Group Attribute:7
+	Num Members:1
+
+[33m
+[+] [0m[32mGetting detailed info for group Domain Guests (RID: 514)
+
+[0m	Group Name:	Domain Guests
+	Description:	All domain guests
+	Group Attribute:7
+	Num Members:1
+
+[33m
+[+] [0m[32mGetting detailed info for group Domain Users (RID: 513)
+
+[0m	Group Name:	Domain Users
+	Description:	All domain users
+	Group Attribute:7
+	Num Members:26
+
+
+[34m ====================( [0m[32mUsers on resolute via RID cycling (RIDS: 500-550,1000-1050)[0m[34m )====================
+
+[0m[33m
+[E] [0m[31mCouldn't get SID: NT_STATUS_ACCESS_DENIED.  RID cycling not possible.
+
+[0m
+[34m =================================( [0m[32mGetting printer info for resolute[0m[34m )=================================
+
+[0mdo_cmd: Could not initialise spoolss. Error was NT_STATUS_ACCESS_DENIED
+
+
+enum4linux complete on Sun Jul  9 09:32:44 2023
+

@@ -1,0 +1,54 @@
+# Nmap 7.94 scan initiated Sat Jul  8 20:25:48 2023 as: nmap -vvv -p 53,80,88,135,139,389,445,464,593,636,3268,3269,5985,9389,49669,49673,49674,49677,49689,49696 -T4 -sV -sC -oA tcp-all 10.10.10.175
+Nmap scan report for suana (10.10.10.175)
+Host is up, received echo-reply ttl 127 (0.060s latency).
+Scanned at 2023-07-08 20:25:49 EDT for 97s
+
+PORT      STATE SERVICE       REASON          VERSION
+53/tcp    open  domain        syn-ack ttl 127 Simple DNS Plus
+80/tcp    open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: Egotistical Bank :: Home
+88/tcp    open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2023-07-09 07:25:56Z)
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: EGOTISTICAL-BANK.LOCAL0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+464/tcp   open  kpasswd5?     syn-ack ttl 127
+593/tcp   open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack ttl 127
+3268/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: EGOTISTICAL-BANK.LOCAL0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack ttl 127
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        syn-ack ttl 127 .NET Message Framing
+49669/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49673/tcp open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+49674/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49677/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49689/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49696/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+Service Info: Host: SAUNA; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 35558/tcp): CLEAN (Timeout)
+|   Check 2 (port 48644/tcp): CLEAN (Timeout)
+|   Check 3 (port 57297/udp): CLEAN (Timeout)
+|   Check 4 (port 34402/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-time: 
+|   date: 2023-07-09T07:26:49
+|_  start_date: N/A
+|_clock-skew: 6h59m59s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jul  8 20:27:26 2023 -- 1 IP address (1 host up) scanned in 97.87 seconds
