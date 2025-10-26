@@ -1,0 +1,27 @@
+WhatWeb report for [1m[34mhttps://friendzoneportal.red[0m
+Status    : 200 OK
+Title     : [1m[33mWatching you ![0m
+IP        : 10.10.10.123
+Country   : [1m[31mRESERVED, ZZ[0m
+
+Summary   : [1mHTTPServer[0m[[1m[31mUbuntu Linux[0m][[1m[36mApache/2.4.29 (Ubuntu)[0m]
+
+Detected Plugins:
+[ [1mHTTPServer[0m ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : [1m[31mUbuntu Linux[0m
+	String       : [1m[36mApache/2.4.29 (Ubuntu)[0m (from server string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Sun, 10 Apr 2022 21:50:36 GMT
+	Server: Apache/2.4.29 (Ubuntu)
+	Last-Modified: Fri, 05 Oct 2018 22:54:42 GMT
+	ETag: "42-57783282d95e6"
+	Accept-Ranges: bytes
+	Content-Length: 66
+	Connection: close
+	Content-Type: text/html
+	

@@ -1,0 +1,67 @@
+WhatWeb report for [1m[34mhttp://10.10.10.97[0m
+Status    : 302 Found
+Title     : [1m[33m<None>[0m
+IP        : 10.10.10.97
+Country   : [1m[31mRESERVED, ZZ[0m
+
+Summary   : [1mPHP[0m[[1m[32m7.2.7[0m], [1mX-Powered-By[0m[[0m[22mPHP/7.2.7[0m], [1mRedirectLocation[0m[[0m[22mlogin.php[0m], [1mMicrosoft-IIS[0m[[1m[32m10.0[0m], [1mHTTPServer[0m[[1m[36mMicrosoft-IIS/10.0[0m], [1mCookies[0m[[0m[22mPHPSESSID[0m]
+
+Detected Plugins:
+[ [1mCookies[0m ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : [1m[36mPHPSESSID[0m
+
+[ [1mHTTPServer[0m ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : [1m[36mMicrosoft-IIS/10.0[0m (from server string)
+
+[ [1mMicrosoft-IIS[0m ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : [1m[32m10.0[0m
+	Website     : http://www.iis.net/
+
+[ [1mPHP[0m ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : [1m[32m7.2.7[0m
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ [1mRedirectLocation[0m ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : [1m[36mlogin.php[0m (from location)
+
+[ [1mX-Powered-By[0m ]
+	X-Powered-By HTTP header 
+
+	String       : [1m[36mPHP/7.2.7[0m (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 302 Found
+	Cache-Control: no-store, no-cache, must-revalidate
+	Pragma: no-cache
+	Content-Type: text/html; charset=UTF-8
+	Expires: Thu, 19 Nov 1981 08:52:00 GMT
+	Location: login.php
+	Server: Microsoft-IIS/10.0
+	X-Powered-By: PHP/7.2.7
+	Set-Cookie: PHPSESSID=iaghooplsl738j44qo9097vtue; path=/
+	Date: Sat, 21 Aug 2021 20:27:58 GMT
+	Connection: close
+	Content-Length: 0
+	

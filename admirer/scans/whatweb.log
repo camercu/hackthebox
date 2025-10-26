@@ -1,0 +1,54 @@
+WhatWeb report for [1m[34mhttp://10.10.10.187[0m
+Status    : 200 OK
+Title     : [1m[33mAdmirer[0m
+IP        : 10.10.10.187
+Country   : [1m[31mRESERVED, ZZ[0m
+
+Summary   : [1mScript[0m, [1mApache[0m[[1m[32m2.4.25[0m], [1mHTML5[0m, [1mHTTPServer[0m[[1m[31mDebian Linux[0m][[1m[36mApache/2.4.25 (Debian)[0m], [1mJQuery[0m
+
+Detected Plugins:
+[ [1mApache[0m ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : [1m[32m2.4.25[0m (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ [1mHTML5[0m ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ [1mHTTPServer[0m ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : [1m[31mDebian Linux[0m
+	String       : [1m[36mApache/2.4.25 (Debian)[0m (from server string)
+
+[ [1mJQuery[0m ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ [1mScript[0m ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Tue, 24 Aug 2021 00:22:50 GMT
+	Server: Apache/2.4.25 (Debian)
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 1914
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	

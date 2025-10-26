@@ -1,0 +1,36 @@
+WhatWeb report for [1m[34mhttp://10.10.10.97:8808[0m
+Status    : 200 OK
+Title     : [1m[33mIIS Windows[0m
+IP        : 10.10.10.97
+Country   : [1m[31mRESERVED, ZZ[0m
+
+Summary   : [1mMicrosoft-IIS[0m[[1m[32m10.0[0m], [1mHTTPServer[0m[[1m[36mMicrosoft-IIS/10.0[0m]
+
+Detected Plugins:
+[ [1mHTTPServer[0m ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : [1m[36mMicrosoft-IIS/10.0[0m (from server string)
+
+[ [1mMicrosoft-IIS[0m ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : [1m[32m10.0[0m
+	Website     : http://www.iis.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Last-Modified: Thu, 21 Jun 2018 15:26:03 GMT
+	Accept-Ranges: bytes
+	ETag: "733dc72a749d41:0"
+	Server: Microsoft-IIS/10.0
+	Date: Sat, 21 Aug 2021 20:31:54 GMT
+	Connection: close
+	Content-Length: 696
+	

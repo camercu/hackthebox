@@ -1,0 +1,119 @@
+WhatWeb report for [1m[34mhttp://10.10.10.143[0m
+Status    : 200 OK
+Title     : [1m[33mStark Hotel[0m
+IP        : 10.10.10.143
+Country   : [1m[31mRESERVED, ZZ[0m
+
+Summary   : [1mScript[0m, [1mApache[0m[[1m[32m2.4.25[0m], [1mModernizr[0m[[1m[32m2.6.2.min[0m], [1mUncommonHeaders[0m[[0m[22mironwaf[0m], [1mBootstrap[0m[[1m[32m3.3.5[0m], [1mHTML5[0m, [1mHTTPServer[0m[[1m[31mDebian Linux[0m][[1m[36mApache/2.4.25 (Debian)[0m], [1mOpen-Graph-Protocol[0m, [1mEmail[0m[[0m[22msupersecurehotel@logger.htb[0m], [1mX-UA-Compatible[0m[[0m[22mIE=edge[0m], [1mJQuery[0m, [1mCookies[0m[[0m[22mPHPSESSID[0m]
+
+Detected Plugins:
+[ [1mApache[0m ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : [1m[32m2.4.25[0m (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ [1mBootstrap[0m ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Version      : [1m[32m3.3.5[0m
+	Version      : [1m[32m3.3.5[0m
+	Website     : https://getbootstrap.com/
+
+[ [1mCookies[0m ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : [1m[36mPHPSESSID[0m
+
+[ [1mEmail[0m ]
+	Extract email addresses. Find valid email address and 
+	syntactically invalid email addresses from mailto: link 
+	tags. We match syntactically invalid links containing 
+	mailto: to catch anti-spam email addresses, eg. bob at 
+	gmail.com. This uses the simplified email regular 
+	expression from 
+	http://www.regular-expressions.info/email.html for valid 
+	email address matching. 
+
+	String       : [1m[36msupersecurehotel@logger.htb[0m
+
+[ [1mHTML5[0m ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ [1mHTTPServer[0m ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : [1m[31mDebian Linux[0m
+	String       : [1m[36mApache/2.4.25 (Debian)[0m (from server string)
+
+[ [1mJQuery[0m ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ [1mModernizr[0m ]
+	Modernizr adds classes to the <html> element which allow 
+	you to target specific browser functionality in your 
+	stylesheet. You don't actually need to write any Javascript 
+	to use it. [JavaScript] 
+
+	Version      : [1m[32m2.6.2.min[0m
+	Website     : http://www.modernizr.com/
+
+[ [1mOpen-Graph-Protocol[0m ]
+	The Open Graph protocol enables you to integrate your Web 
+	pages into the social graph. It is currently designed for 
+	Web pages representing profiles of real-world things . 
+	things like movies, sports teams, celebrities, and 
+	restaurants. Including Open Graph tags on your Web page, 
+	makes your page equivalent to a Facebook Page. 
+
+
+[ [1mScript[0m ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+[ [1mUncommonHeaders[0m ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : [1m[36mironwaf[0m (from headers)
+
+[ [1mX-UA-Compatible[0m ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : [1m[36mIE=edge[0m
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Tue, 23 Nov 2021 18:23:52 GMT
+	Server: Apache/2.4.25 (Debian)
+	Set-Cookie: PHPSESSID=qjqmcuc81eiojliek16rqpmus0; path=/
+	Expires: Thu, 19 Nov 1981 08:52:00 GMT
+	Cache-Control: no-store, no-cache, must-revalidate
+	Pragma: no-cache
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	IronWAF: 2.0.3
+	Content-Length: 3453
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	
